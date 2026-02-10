@@ -15,8 +15,8 @@ export default function Home() {
       <Projects />
 
       <section className="border-primary/5 bg-sand-50 border-y px-6 py-24">
-        <div className="mx-auto max-w-4xl text-center">
-          <blockquote className="font-display mb-8 text-4xl leading-snug italic md:text-5xl">
+        <div className="mx-auto max-w-6xl text-center">
+          <blockquote className="mb-8 font-serif text-4xl leading-snug italic md:text-6xl">
             Design is not just what it looks like and feels like. Design is how
             it works for the soul.
           </blockquote>
