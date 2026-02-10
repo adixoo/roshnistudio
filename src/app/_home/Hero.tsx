@@ -10,19 +10,16 @@ export default function Hero() {
       </div>
       <div className="relative z-10 mx-auto w-full max-w-7xl px-8">
         <div className="max-w-4xl">
-          <span className="text-gold mb-8 block text-xs font-bold tracking-[0.4em] uppercase">
+          <span className="text-primary bg-primary-foreground px-3 py-2 text-xs font-bold tracking-[0.4em] uppercase">
             Residential &amp; Wellness Studio
           </span>
-          <h1 className="mb-12 font-serif text-6xl leading-[1.1] font-light text-white md:text-8xl">
-            Architecture for living, wellbeing, and{" "}
-            <span className="italic">long-term calm.</span>
+          <h1 className="mt-8 mb-12 font-serif text-6xl leading-[1.1] font-light text-white md:text-8xl">
+            {/* Architecture for living, wellbeing, and{" "}
+            <span className="italic">long-term calm.</span> */}
+            Architecture Design guided by{" "}
+            <span className="font-medium italic">Human Biology</span>, not
+            trends.
           </h1>
-          <div className="flex items-center space-x-6">
-            <div className="bg-gold h-px w-20" />
-            <p className="text-lg font-light tracking-wide text-white/70">
-              Design guided by human biology, not trends.
-            </p>
-          </div>
         </div>
       </div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/30">
