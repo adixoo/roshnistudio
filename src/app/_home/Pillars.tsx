@@ -1,7 +1,7 @@
 export default function Pillars() {
   return (
     <section className="bg-white py-32" id="pillars">
-      <div className="mx-auto max-w-7xl space-y-48 px-8">
+      <div className="mx-auto max-w-7xl space-y-48 px-4">
         <div className="grid items-center gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">

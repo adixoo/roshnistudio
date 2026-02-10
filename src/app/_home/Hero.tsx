@@ -12,7 +12,7 @@ export default function Hero() {
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuABHzytVmeze-_VWmR3VHWoc9aqF_ckxpVuUE3C6BL_le9mE3IQ8kEUW64rSNLa9pkzqdQXALSqx0shXQ0wnJE8Z1-6yDxEFN2HLZORntNJqStgGyB3EC5mn84EzL5GdRsFNy6HwxmLKHzm1I-XL_8o2fa7iYfJy2kse5ImXZHUXaubU1sTPpsPYzbzBG8pWkiXB5dihFktPGoiFLR4uB6CWs-cOCR6HkGxqfxoLnAYCBBq_EUgVosV9OfOgqyo9nNSGOV_k1b6-g"
         />
       </div>
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-8">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-4">
         <div className="max-w-4xl">
           <Badge>Residential &amp; Wellness Studio</Badge>
           {/* <span className="bg-primary-foreground text-primary px-3 py-2 text-xs font-bold tracking-[0.4em] uppercase"></span> */}

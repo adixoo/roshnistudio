@@ -28,7 +28,7 @@ const projects = [
 export default function Projects() {
   return (
     <section className="bg-white py-32" id="projects">
-      <div className="mx-auto max-w-7xl px-8">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <h2 className="mb-4 font-serif text-5xl">Selected Works</h2>

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export default function CTA() {
   return (
-    <section className="bg-sand-50 px-8 py-24" id="contact">
+    <section className="bg-sand-50 px-4 py-24" id="contact">
       <div className="bg-accent relative mx-auto max-w-7xl overflow-hidden p-16 text-center md:p-32 md:text-left">
         <div className="relative z-10 grid items-center gap-16 md:grid-cols-2">
           <div>

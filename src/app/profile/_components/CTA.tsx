@@ -1,7 +1,7 @@
 export default function CTA() {
   return (
-    <section className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-32">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="bg-accent text-accent-cream flex flex-col justify-center p-12 md:p-20">
             <h3 className="font-display mb-6 text-4xl italic">

@@ -28,7 +28,7 @@ const expertise = [
 export default function Expertise() {
   return (
     <section className="bg-sand-50 border-primary-foreground/5 border-y py-24">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="mb-20 text-center">
           <h2 className="mb-4 font-serif text-4xl md:text-5xl">
             Our Expertise

@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 export default function Philosophy() {
   return (
     <section className="bg-sand-50 py-32" id="philosophy">
-      <div className="mx-auto max-w-7xl px-8">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-24 md:grid-cols-2">
           <div className="order-2 md:order-1">
             <img

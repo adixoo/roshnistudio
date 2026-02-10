@@ -1,7 +1,7 @@
 export default function Approach() {
   return (
-    <section className="px-6 py-32">
-      <div className="mx-auto max-w-7xl">
+    <section className="py-32">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-xl space-y-4">
             <h3 className="text-primary dark:text-accent-cream/50 text-[10px] font-bold tracking-[0.3em] uppercase">

@@ -2,8 +2,8 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Hero() {
   return (
-    <header className="px-6 pt-40 pb-20">
-      <div className="mx-auto max-w-7xl">
+    <header className="pt-40 pb-20">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-16 md:grid-cols-2">
           <div className="space-y-8">
             <Badge> roshni studio profile</Badge>
