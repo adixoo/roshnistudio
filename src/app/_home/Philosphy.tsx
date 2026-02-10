@@ -11,21 +11,23 @@ export default function Philosophy() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <span className="text-primary-forborder-primary-foreground/40 mb-6 block text-[10px] font-bold tracking-[0.3em] uppercase">
+            <span className="text-primary mb-6 block text-[10px] font-bold tracking-[0.3em] uppercase">
               Our Belief
             </span>
             <h2 className="mb-8 font-serif text-5xl leading-tight md:text-6xl">
               A vessel for <br />
               mindfulness.
             </h2>
-            <p className="text-primary-forborder-primary-foreground/80 mb-8 text-xl leading-relaxed font-light">
+            <p className="text-charcoal/80 mb-8 text-xl leading-relaxed font-light">
               We believe a home is more than a structure; it is an instrument
               for wellbeing. Our practice is dedicated to creating spaces that
               act as a sanctuary for the soul, where light, air, and materiality
               converge to support the human spirit.
             </p>
-            <p className="text-primary-forborder-primary-foreground/60 text-lg leading-relaxed font-light italic">
-              Every line we draw is an invitation to slow down.
+            <div className="bg-primary mb-8 h-px w-24" />
+
+            <p className="text-charcoal/60 text-lg leading-relaxed font-light italic">
+              &quot;Every line we draw is an invitation to slow down.&quot;
             </p>
           </div>
         </div>

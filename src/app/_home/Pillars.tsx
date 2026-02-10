@@ -4,16 +4,19 @@ export default function Pillars() {
       <div className="mx-auto max-w-7xl space-y-48 px-8">
         <div className="grid items-center gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <span className="text-gold mb-4 block text-xs font-bold tracking-widest uppercase">
+            <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">
               01 / Biological
             </span>
-            <h2 className="mb-8 text-4xl md:text-5xl">Neuroarchitecture</h2>
-            <p className="text-primary-forborder-primary-foreground/70 mb-6 text-lg leading-relaxed">
+            <h2 className="mb-8 font-serif text-4xl md:text-5xl">
+              Neuroarchitecture
+            </h2>
+            <p className="text-primary-foreground/80 mb-6 text-lg leading-relaxed">
               Utilizing the principles of neuroscience to design spaces that
               reduce cortisol levels and promote cognitive focus. We analyze
               spatial proportions and lighting patterns to align with your
               circadian rhythm.
             </p>
+            <div className="bg-primary/40 mt-6 h-0.5 w-12"></div>
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <img
@@ -32,30 +35,34 @@ export default function Pillars() {
             />
           </div>
           <div className="md:col-span-5 md:col-start-8">
-            <span className="text-gold mb-4 block text-xs font-bold tracking-widest uppercase">
+            <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">
               02 / Sensorial
             </span>
-            <h2 className="mb-8 text-4xl md:text-5xl">
+            <h2 className="mb-8 font-serif text-4xl md:text-5xl">
               Materiality &amp; Atmosphere
             </h2>
-            <p className="text-primary-forborder-primary-foreground/70 mb-6 text-lg leading-relaxed">
+            <p className="text-primary-foreground/80 mb-6 text-lg leading-relaxed">
               We prioritize raw, honest materials that age with grace. Stone,
               timber, and lime plaster are selected for their haptic qualities
               and their ability to improve indoor air quality naturally.
             </p>
+            <div className="bg-primary/40 mt-6 h-0.5 w-12"></div>
           </div>
         </div>
         <div className="grid items-center gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <span className="text-gold mb-4 block text-xs font-bold tracking-widest uppercase">
+            <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">
               03 / Lifestyle
             </span>
-            <h2 className="mb-8 text-4xl md:text-5xl">Residential Thinking</h2>
-            <p className="text-primary-forborder-primary-foreground/70 mb-6 text-lg leading-relaxed">
+            <h2 className="mb-8 font-serif text-4xl md:text-5xl">
+              Residential Thinking
+            </h2>
+            <p className="text-primary-foreground/80 mb-6 text-lg leading-relaxed">
               A home is a curated sequence of rituals. From the acoustic privacy
               of a workspace to the restorative warmth of a bedroom, we design
               for the quiet moments that define your life.
             </p>
+            <div className="bg-primary/40 mt-6 h-0.5 w-12"></div>
           </div>
           <div className="md:col-span-6 md:col-start-7">
             <img
