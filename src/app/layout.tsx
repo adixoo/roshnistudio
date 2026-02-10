@@ -120,7 +120,7 @@ export default function RootLayout({
       <body className={`${sans.variable} ${serif.variable} antialiased`}>
         <ReactLenis root>
           <Navbar />
-          {children}
+          <main>{children}</main>
           <Footer />
         </ReactLenis>
         <NextTopLoader

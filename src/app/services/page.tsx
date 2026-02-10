@@ -1,46 +1,6 @@
 export default function ServicesPage() {
   return (
     <div className="bg-background-light dark:bg-background-dark text-slate-900 transition-colors duration-300 dark:text-slate-100">
-      <nav className="bg-background-light/90 dark:bg-background-dark/90 border-primary/10 fixed z-50 w-full border-b backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
-          <div className="flex items-center gap-2">
-            <div className="bg-primary flex h-8 w-8 rotate-45 transform items-center justify-center text-white">
-              <span className="font-display -rotate-45 transform text-lg font-bold">
-                K
-              </span>
-            </div>
-            <span className="font-display text-xl font-semibold tracking-wider uppercase">
-              Kyle Mills
-            </span>
-          </div>
-          <div className="hidden items-center gap-8 text-sm font-medium tracking-widest uppercase md:flex">
-            <a className="hover:text-primary transition-colors" href="#">
-              Home
-            </a>
-            <a className="hover:text-primary transition-colors" href="#">
-              About
-            </a>
-            <a className="text-primary border-primary border-b" href="#">
-              Services
-            </a>
-            <a className="hover:text-primary transition-colors" href="#">
-              Projects
-            </a>
-            <a className="hover:text-primary transition-colors" href="#">
-              Contact
-            </a>
-            <a
-              className="bg-primary hover:bg-opacity-90 px-6 py-2 text-white transition-all"
-              href="#"
-            >
-              Let&apos;s Talk
-            </a>
-          </div>
-          <button className="text-primary md:hidden">
-            <span className="material-symbols-outlined">menu</span>
-          </button>
-        </div>
-      </nav>
       <section className="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
         <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
           <div className="max-w-3xl">
@@ -252,78 +212,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <footer className="bg-background-light pt-24 pb-12 dark:bg-zinc-950">
-        <div className="mx-auto max-w-7xl px-6 lg:px-12">
-          <div className="mb-20 grid grid-cols-1 gap-12 lg:grid-cols-4">
-            <div className="col-span-1 lg:col-span-1">
-              <div className="mb-8 flex items-center gap-2">
-                <div className="bg-primary flex h-8 w-8 rotate-45 transform items-center justify-center text-white">
-                  <span className="font-display -rotate-45 transform text-lg font-bold">
-                    K
-                  </span>
-                </div>
-                <span className="font-display text-xl font-semibold tracking-wider uppercase">
-                  Kyle Mills
-                </span>
-              </div>
-              <p className="leading-relaxed text-slate-500 dark:text-slate-400">
-                A boutique architectural practice dedicated to creating spaces
-                that endure through time, design, and quality.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-display mb-8 text-lg">Contact Details</h4>
-              <ul className="space-y-4 text-slate-500 dark:text-slate-400">
-                <li>Kyle Mills Studio</li>
-                <li>+44 (0) 20 7946 0123</li>
-                <li>studio@kylemills.co.uk</li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-display mb-8 text-lg">Get In Touch</h4>
-              <p className="mb-6 text-slate-500 dark:text-slate-400">
-                Let&apos;s bring your vision to life—get in touch to start
-                designing a space that&apos;s uniquely yours.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-display mb-8 text-lg">Our Location</h4>
-              <p className="text-slate-500 dark:text-slate-400">
-                123 Design Mews,
-                <br />
-                Kensington, London,
-                <br />
-                W8 4PT, UK
-              </p>
-            </div>
-          </div>
-          <div className="border-primary/10 flex flex-col items-center justify-between gap-6 border-t pt-12 text-sm tracking-wider text-slate-400 md:flex-row">
-            <p>
-              Copyright © 2024 Kyle Mills Architecture | Designed by Excellence
-            </p>
-            <div className="flex gap-8">
-              <a className="hover:text-primary transition-colors" href="#">
-                Facebook
-              </a>
-              <a className="hover:text-primary transition-colors" href="#">
-                Instagram
-              </a>
-              <a className="hover:text-primary transition-colors" href="#">
-                LinkedIn
-              </a>
-              <a className="hover:text-primary transition-colors" href="#">
-                Pinterest
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <button className="text-primary border-primary/20 fixed right-8 bottom-8 z-50 flex items-center justify-center rounded-full border bg-white p-4 shadow-2xl dark:bg-zinc-800">
-        <span className="material-symbols-outlined dark:hidden">dark_mode</span>
-        <span className="material-symbols-outlined hidden dark:block">
-          light_mode
-        </span>
-      </button>
     </div>
   );
 }
