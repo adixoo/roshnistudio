@@ -1,17 +1,17 @@
+import { Badge } from "@/components/ui/badge";
+
 export default function Approach() {
   return (
     <section className="py-32">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-xl space-y-4">
-            <h3 className="text-primary dark:text-accent-cream/50 text-[10px] font-bold tracking-[0.3em] uppercase">
-              Our Approach
-            </h3>
+            <Badge variant={"text"}>Our approach</Badge>
             <h2 className="text-charcoal dark:text-accent-cream font-serif text-4xl md:text-6xl">
               How We Work
             </h2>
           </div>
-          <p className="text-charcoal/70 dark:text-accent-cream/70 max-w-md text-sm leading-relaxed tracking-wider uppercase">
+          <p className="text-charcoal/80 max-w-md text-sm leading-relaxed tracking-wider">
             Our process is iterative, transparent, and deeply collaborative. We
             believe the best results come from a shared vision.
           </p>
