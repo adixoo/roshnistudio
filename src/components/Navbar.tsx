@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 const NAV_LINKS = [
   { label: "The Studio", href: "/profile" },
@@ -31,11 +32,8 @@ export default function Header() {
             ))}
           </nav>
 
-          <Link
-            className="bg-primary text-primary-foreground px-6 py-3 text-sm font-medium uppercase transition-all hover:bg-white"
-            href="/contact"
-          >
-            let&apos;s talk
+          <Link href="/contact">
+            <Button variant={"outline"}>let&apos;s talk</Button>
           </Link>
 
           <button className="md:hidden">

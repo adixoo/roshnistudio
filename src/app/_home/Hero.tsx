@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { PiCaretDoubleDown } from "react-icons/pi";
 
 export default function Hero() {
@@ -21,6 +22,8 @@ export default function Hero() {
             <span className="font-medium italic">Human Biology</span>, not
             trends.
           </h1>
+
+          <Button className="">Book A Consultation</Button>
         </div>
       </div>
 
