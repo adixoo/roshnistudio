@@ -1,3 +1,5 @@
+import { Badge } from "@/components/ui/badge";
+
 export default function Philosophy() {
   return (
     <section className="bg-sand-50 py-32" id="philosophy">
@@ -11,9 +13,7 @@ export default function Philosophy() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <span className="text-primary mb-6 block text-[10px] font-bold tracking-[0.3em] uppercase">
-              Our Belief
-            </span>
+            <Badge variant={"text"}>Our Belief</Badge>
             <h2 className="mb-8 font-serif text-5xl leading-tight md:text-6xl">
               A vessel for <br />
               mindfulness.

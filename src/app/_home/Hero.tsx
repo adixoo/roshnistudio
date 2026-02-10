@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { PiCaretDoubleDown } from "react-icons/pi";
 
@@ -13,9 +14,8 @@ export default function Hero() {
       </div>
       <div className="relative z-10 mx-auto w-full max-w-7xl px-8">
         <div className="max-w-4xl">
-          <span className="bg-primary-foreground text-primary px-3 py-2 text-xs font-bold tracking-[0.4em] uppercase">
-            Residential &amp; Wellness Studio
-          </span>
+          <Badge>Residential &amp; Wellness Studio</Badge>
+          {/* <span className="bg-primary-foreground text-primary px-3 py-2 text-xs font-bold tracking-[0.4em] uppercase"></span> */}
 
           <h1 className="mt-8 mb-12 font-serif text-6xl leading-[1.1] font-light text-white md:text-8xl">
             Architecture Design guided by{" "}
