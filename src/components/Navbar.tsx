@@ -1,3 +1,11 @@
+import Link from "next/link";
+
+const NAV_LINKS = [
+  { label: "The Studio", href: "/profile" },
+  { label: "Projects", href: "/projects" },
+  { label: "Services", href: "/services" }
+];
+
 export default function Header() {
   return (
     <nav className="bg-primary-foreground/90 fixed top-0 z-50 w-full border-b border-white/5 backdrop-blur-sm">
@@ -8,22 +16,16 @@ export default function Header() {
 
         <div className="flex items-center gap-12">
           <nav className="hidden space-x-6 text-xs font-medium tracking-[0.2em] uppercase md:flex">
-            <a className="nav-link relative" href="#">
-              {" "}
-              Projects{" "}
-            </a>
-            <a className="nav-link relative" href="#">
-              {" "}
-              The Studio{" "}
-            </a>
-            <a className="nav-link relative" href="#">
-              {" "}
-              Approach{" "}
-            </a>
-            <a className="nav-link relative" href="#">
-              {" "}
-              Contact{" "}
-            </a>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="nav-link relative"
+                prefetch={false}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
 
           <a
@@ -32,6 +34,7 @@ export default function Header() {
           >
             let&apos;s talk
           </a>
+
           <button className="md:hidden">
             <span className="material-icons">menu</span>
           </button>
