@@ -1,3 +1,5 @@
+import { PiArrowUpRight } from "react-icons/pi";
+
 export default function Projects() {
   const projects = [
     {
@@ -56,7 +58,8 @@ export default function Projects() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   src={project.image}
                 />
-                <div className="project-overlay absolute inset-0 flex flex-col justify-end p-8 text-white md:p-12">
+
+                <div className="absolute inset-0 flex flex-col justify-end bg-black/30 p-8 text-white transition-opacity duration-500 group-hover:bg-black/40 md:p-12">
                   <div className="flex items-center justify-between border-b border-white/20 pb-4">
                     <div>
                       <h3 className="text-2xl font-light tracking-widest uppercase md:text-3xl">
@@ -66,9 +69,11 @@ export default function Projects() {
                         {project.location}
                       </p>
                     </div>
-                    <span className="material-symbols-outlined text-3xl font-light">
-                      arrow_forward
-                    </span>
+
+                    <PiArrowUpRight
+                      size={28}
+                      className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    />
                   </div>
                 </div>
               </div>
