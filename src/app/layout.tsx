@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Navbar/Navbar";
 import { ApplicationUrl } from "@/lib/appUrl";
 import ReactLenis from "lenis/react";
 import type { Metadata, Viewport } from "next";
@@ -119,7 +119,7 @@ export default function RootLayout({
       </head>
       <body className={`${sans.variable} ${serif.variable} antialiased`}>
         <ReactLenis root>
-          <Navbar />
+          <Header />
           <main>{children}</main>
           <Footer />
         </ReactLenis>

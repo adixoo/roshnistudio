@@ -1,5 +1,10 @@
+"use client";
+
+import { AnimatePresence } from "motion/react";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { useState } from "react";
+import { Button } from "../ui/button";
+import MobileNavbar from "./MobileNavbar";
 
 const NAV_LINKS = [
   { label: "The Studio", href: "/profile" },
@@ -8,11 +13,13 @@ const NAV_LINKS = [
 ];
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="bg-primary-foreground/90 fixed top-0 z-50 w-full border-b border-white/5 backdrop-blur-sm">
       <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 text-white">
         <Link
-          className="font-serif text-xl tracking-[0.3em] uppercase"
+          className="font-serif text-lg tracking-[0.3em] uppercase sm:text-xl"
           href="/"
         >
           ROSHNI STUDIO
@@ -32,13 +39,22 @@ export default function Header() {
             ))}
           </nav>
 
-          <Link href="/contact">
+          <Link href="/contact" className="max-sm:hidden">
             <Button variant={"outline"}>let&apos;s talk</Button>
           </Link>
 
-          <button className="md:hidden">
-            <span className="material-icons">menu</span>
+          <button
+            onClick={() => setIsOpen(true)}
+            className="text-sm font-medium tracking-widest uppercase md:hidden"
+          >
+            Menu
           </button>
+
+          <AnimatePresence>
+            {isOpen && (
+              <MobileNavbar isOpen={isOpen} onClose={() => setIsOpen(false)} />
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </nav>
