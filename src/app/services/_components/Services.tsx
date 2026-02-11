@@ -26,12 +26,11 @@ const services = [
     description:
       "Designing restorative spaces that prioritize health, mindfulness, and a seamless connection to the natural environment.",
     icon: PiFlowerLotusFill,
-    featured: true,
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuACA31WLf1Bx7GaYTStoxa5lFPsFwcHxnKme_UOg7YToh7WurQj0dVaX9Qr7Abj8h90e56DWKrbE-CJVwL3KECAvaFPKRpP5kjuJHHk3hMi5NNcdDDjFTN1vELyUdWd-xak9K0lADrMKsMvoihxIT2sc3OfJ7fIKsE3c8RMK8SVSwCh6iLU9a91nKtdYbjWbgSidXrSkLzxbOvGEIRT_ftwxFAbrLs6EKqVRBGMC5OOZ8_XCGa4W1jqMIHxgjABZr6lk1NOAjhyww"
   },
   {
-    title: "Concept & International",
+    title: "International Projects",
     description:
       "Visionary concepts and remote design consultancy for global clients seeking our signature aesthetic abroad.",
     icon: PiGlobeHemisphereWestFill
@@ -57,47 +56,20 @@ export default function Services() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
             const Icon = service.icon;
-            const isFeatured = service.featured;
 
             return (
               <div
                 key={index}
-                className={`group relative flex h-[450px] flex-col justify-between overflow-hidden p-8 transition-all duration-500 lg:p-12 ${
-                  isFeatured
-                    ? "bg-secondary text-white"
-                    : "border-primary/10 hover:border-primary/40 border bg-white dark:bg-zinc-900/50"
-                }`}
+                className={`group relative flex h-[450px] flex-col justify-between overflow-hidden bg-white p-8 transition-all duration-500 lg:p-12`}
               >
-                {isFeatured && service.image && (
-                  <div className="pointer-events-none absolute inset-0 opacity-20">
-                    <img
-                      src={service.image}
-                      alt={service.title}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                )}
-
                 <div className="relative z-10">
-                  <div
-                    className={`mb-8 ${
-                      isFeatured ? "text-primary" : "text-secondary"
-                    }`}
-                  >
-                    <Icon size={42} />
+                  <div className={`mb-8`}>
+                    <Icon size={42} className="text-charcoal/70" />
                   </div>
 
-                  <h3 className="font-display mb-4 text-2xl">
-                    {service.title}
-                  </h3>
+                  <h3 className="mb-4 font-serif text-2xl">{service.title}</h3>
 
-                  <p
-                    className={`leading-relaxed ${
-                      isFeatured
-                        ? "text-slate-200"
-                        : "text-slate-500 dark:text-slate-400"
-                    }`}
-                  >
+                  <p className={`text-charcoal/60 leading-relaxed`}>
                     {service.description}
                   </p>
                 </div>

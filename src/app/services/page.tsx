@@ -6,7 +6,7 @@ const CTA = dynamic(() => import("./_components/CTA"));
 
 export default function ServicesPage() {
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-900 transition-colors duration-300 dark:text-slate-100">
+    <div className="bg-sand-50">
       <Hero />
       <Services />
       <CTA />
