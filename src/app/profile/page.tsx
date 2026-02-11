@@ -1,11 +1,13 @@
-import Approach from "./_components/Approach";
-import CTA from "./_components/CTA";
-import Hero from "./_components/Hero";
-import Quote from "./_components/Quote";
+import dynamic from "next/dynamic";
+
+const Hero = dynamic(() => import("./_components/Hero"));
+const Approach = dynamic(() => import("./_components/Approach"));
+const Quote = dynamic(() => import("./_components/Quote"));
+const CTA = dynamic(() => import("./_components/CTA"));
 
 export default function Profile() {
   return (
-    <div className="bg-background-light dark:bg-background-dark text-primary dark:text-accent-cream transition-colors duration-300">
+    <div className="bg-sand-50">
       <Hero />
       <Quote />
       <Approach />

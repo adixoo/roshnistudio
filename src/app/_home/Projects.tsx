@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 const projects = [
   {
     title: "The Glass House",
@@ -29,7 +32,7 @@ export default function Projects() {
   return (
     <section className="bg-white py-32" id="projects">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+        <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
             <h2 className="mb-4 font-serif text-5xl">Selected Works</h2>
             <p className="text-primary-foreground/80 max-w-md">
@@ -38,12 +41,14 @@ export default function Projects() {
             </p>
           </div>
 
-          <a
-            className="border-gold hover:text-gold border-b pb-2 text-xs font-bold tracking-[0.3em] uppercase transition-colors"
-            href="#"
-          >
-            View All Projects
-          </a>
+          <Link href="/projects">
+            <Button
+              variant={"outline"}
+              className="hover:bg-charcoal/70 text-white"
+            >
+              View All Projects
+            </Button>
+          </Link>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
