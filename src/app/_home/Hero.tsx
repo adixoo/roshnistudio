@@ -4,7 +4,7 @@ import { PiCaretDoubleDown } from "react-icons/pi";
 
 export default function Hero() {
   return (
-    <section className="bg-primary-foreground relative flex h-screen items-center overflow-hidden">
+    <section className="bg-primary-foreground relative flex h-dvh items-center overflow-hidden">
       <div className="absolute inset-0 opacity-60">
         <img
           alt="Cinematic architectural shot"

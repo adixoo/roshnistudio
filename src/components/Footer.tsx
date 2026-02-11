@@ -6,7 +6,7 @@ const Footer = () => (
           <h2 className="font-display mb-8 text-2xl tracking-widest uppercase">
             KYLE MILLS
           </h2>
-          <p className="max-w-xs text-sm leading-relaxed opacity-60">
+          <p className="max-w-xs leading-relaxed opacity-60">
             A design practice dedicated to human-centric architecture and the
             pursuit of quiet beauty.
           </p>
@@ -32,7 +32,7 @@ const Footer = () => (
           <h4 className="mb-6 text-xs font-bold tracking-widest uppercase">
             Follow
           </h4>
-          <div className="flex space-x-6 opacity-80">
+          <div className="flex space-x-6 text-sm opacity-80">
             <a className="transition-opacity hover:opacity-60" href="#">
               Instagram
             </a>
@@ -46,7 +46,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="border-primary/5 flex flex-col items-center justify-between space-y-4 border-t pt-12 text-[10px] tracking-widest uppercase opacity-40 md:flex-row md:space-y-0">
-        <p>© 2024 Kyle Mills Design. All rights reserved.</p>
+        <p>© 2026 Roshni Studio. All rights reserved.</p>
         <div className="flex space-x-8">
           <a className="hover:opacity-100" href="#">
             Privacy Policy

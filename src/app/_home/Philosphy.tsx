@@ -8,7 +8,7 @@ export default function Philosophy() {
           <div className="order-2 md:order-1">
             <img
               alt="A vessel for mindfulness"
-              className="aspect-[4/5] w-full object-cover shadow-2xl"
+              className="aspect-4/5 w-full object-cover shadow-2xl"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGWEM7gVFoNtC0LUA0OIOirxvbGhW0GTxYJSXFBZU8_-rykAVwPKyKsL7LC1JiTgDMfqPMVBW0JIZy2nMPLOYsNk4KXbwf_Zo9uTl9Z88WTrulEYlFC-zaU570XUmpUAUP1sdXIff2Yr63YrZU6I0P7WBN8UzV-2uCAtSNzF26zViUk2D-qWkIZt6x_uUe3hwBjcUw_lcXPp0fpM-n4ntUWEds3T51GO3ePlTWUnFm2riIZ6N5Fn83nt2AwcriKMfVCRZ4i5HZ1w"
             />
           </div>
@@ -18,7 +18,7 @@ export default function Philosophy() {
               A vessel for <br />
               mindfulness.
             </h2>
-            <p className="text-charcoal/80 mb-8 text-xl leading-relaxed font-light">
+            <p className="text-charcoal/80 mb-8 leading-relaxed font-light">
               We believe a home is more than a structure; it is an instrument
               for wellbeing. Our practice is dedicated to creating spaces that
               act as a sanctuary for the soul, where light, air, and materiality

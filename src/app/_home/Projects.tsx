@@ -66,7 +66,7 @@ export default function Projects() {
               </div>
 
               <div className="flex items-center justify-between">
-                <h4 className="text-2xl">{project.title}</h4>
+                <h4 className="text-xl md:text-2xl">{project.title}</h4>
                 <span className="text-[10px] font-bold tracking-widest uppercase opacity-40">
                   {project.location}
                 </span>
