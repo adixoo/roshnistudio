@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -28,51 +30,112 @@ const projects = [
   }
 ];
 
+import { motion } from "framer-motion";
+
+const ease = [0.16, 1, 0.3, 1] as const;
+
 export default function Projects() {
   return (
     <section className="bg-white py-32" id="projects">
       <div className="mx-auto max-w-7xl px-4">
+        {/* Header */}
         <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <h2 className="mb-4 font-serif text-5xl">Selected Works</h2>
-            <p className="text-primary-foreground/80 max-w-md">
+            {/* Heading – Level 1 */}
+            <motion.h2
+              className="mb-4 font-serif text-5xl"
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              Selected Works
+            </motion.h2>
+
+            {/* Paragraph – Level 2 */}
+            <motion.p
+              className="text-primary-foreground/80 max-w-md"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1, ease }}
+              viewport={{ once: true, amount: 0.3 }}
+            >
               A curation of projects defined by their relationship to light,
               site, and serenity.
-            </p>
+            </motion.p>
           </div>
 
-          <Link href="/projects">
-            <Button
-              variant={"outline"}
-              className="hover:bg-charcoal/70 text-white"
-            >
-              View All Projects
-            </Button>
-          </Link>
+          {/* Button – subtle pop */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.15, ease }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
+            <Link href="/projects">
+              <Button
+                variant="outline"
+                className="hover:bg-charcoal/70 text-white"
+              >
+                View All Projects
+              </Button>
+            </Link>
+          </motion.div>
         </div>
 
+        {/* Grid */}
         <div className="grid gap-12 md:grid-cols-2">
-          {projects.map((project, index) => (
-            <div
-              key={project.title}
-              className={`group space-y-6 ${index % 2 === 1 ? "mt-12" : ""}`}
-            >
-              <div className="overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="aspect-[4/3] w-full scale-100 object-cover grayscale transition-all duration-700 group-hover:scale-105 hover:grayscale-0"
-                />
-              </div>
+          {projects.map((project, index) => {
+            const delay = index * 0.1; // 0ms, 100ms, 200ms, 300ms
 
-              <div className="flex items-center justify-between">
-                <h4 className="text-xl md:text-2xl">{project.title}</h4>
-                <span className="text-[10px] font-bold tracking-widest uppercase opacity-40">
-                  {project.location}
-                </span>
-              </div>
-            </div>
-          ))}
+            return (
+              <motion.div
+                key={project.title}
+                className={`group space-y-6 ${index % 2 === 1 ? "mt-12" : ""}`}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.55, delay, ease }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
+                {/* Image */}
+                <motion.div
+                  className="overflow-hidden"
+                  initial={{ opacity: 0, y: 60, scale: 0.97 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: delay + 0.05,
+                    ease
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="aspect-[4/3] w-full scale-100 object-cover grayscale transition-all duration-700 group-hover:scale-105 hover:grayscale-0"
+                  />
+                </motion.div>
+
+                {/* Title + Location */}
+                <motion.div
+                  className="flex items-center justify-between"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: delay + 0.15,
+                    ease
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
+                  <h4 className="text-xl md:text-2xl">{project.title}</h4>
+                  <span className="text-[10px] font-bold tracking-widest uppercase opacity-40">
+                    {project.location}
+                  </span>
+                </motion.div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

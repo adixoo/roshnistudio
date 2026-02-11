@@ -1,3 +1,5 @@
+"use client";
+
 const PILLARS = [
   {
     id: "01",
@@ -32,37 +34,102 @@ const PILLARS = [
   }
 ];
 
+import { motion } from "framer-motion";
+
+const ease = [0.16, 1, 0.3, 1] as const;
+
 export default function Pillars() {
   return (
     <section className="bg-white py-32" id="pillars">
       <div className="mx-auto max-w-7xl space-y-48 px-4">
         {PILLARS.map((pillar, index) => {
-          // Determine if the layout should be reversed (even index = 0, 2, 4...)
           const isReversed = index % 2 !== 0;
+          const baseDelay = index * 0.12; // structured stagger between sections
 
           return (
-            <div
+            <motion.div
               key={pillar.id}
               className={`flex flex-col items-center gap-12 md:flex-row ${
                 isReversed ? "md:flex-row-reverse" : ""
               }`}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: baseDelay, ease }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               {/* Text Content */}
               <div className="flex-1 md:max-w-[42%]">
-                <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">
+                {/* Category */}
+                <motion.span
+                  className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.45,
+                    delay: baseDelay + 0.05,
+                    ease
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   {pillar.id} / {pillar.category}
-                </span>
-                <h2 className="mb-8 font-serif text-4xl md:text-5xl">
+                </motion.span>
+
+                {/* Title – Level 1 */}
+                <motion.h2
+                  className="mb-8 font-serif text-4xl md:text-5xl"
+                  initial={{ opacity: 0, y: 70 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: baseDelay + 0.1,
+                    ease
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   {pillar.title}
-                </h2>
-                <p className="text-primary-foreground/80 mb-6 leading-relaxed">
+                </motion.h2>
+
+                {/* Description – Level 2 */}
+                <motion.p
+                  className="text-primary-foreground/80 mb-6 leading-relaxed"
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: baseDelay + 0.18,
+                    ease
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
+                >
                   {pillar.description}
-                </p>
-                <div className="bg-primary/40 mt-6 h-0.5 w-12"></div>
+                </motion.p>
+
+                {/* Divider */}
+                <motion.div
+                  className="bg-primary/40 mt-6 h-0.5 w-12"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.45,
+                    delay: baseDelay + 0.25,
+                    ease
+                  }}
+                  viewport={{ once: true, amount: 0.3 }}
+                />
               </div>
 
-              {/* Image Content */}
-              <div className="flex-1 md:max-w-[50%]">
+              {/* Image – Level 4 */}
+              <motion.div
+                className="flex-1 md:max-w-[50%]"
+                initial={{ opacity: 0, y: 60, scale: 0.97 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 0.6,
+                  delay: baseDelay + 0.15,
+                  ease
+                }}
+                viewport={{ once: true, amount: 0.3 }}
+              >
                 <img
                   alt={pillar.alt}
                   src={pillar.image}
@@ -70,8 +137,8 @@ export default function Pillars() {
                     pillar.isTall ? "aspect-[3/4]" : "aspect-video"
                   }`}
                 />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           );
         })}
       </div>
