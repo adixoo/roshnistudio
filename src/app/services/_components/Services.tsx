@@ -1,21 +1,31 @@
+import {
+  PiArrowRightFill,
+  PiChartLineUpFill,
+  PiCubeTransparentFill,
+  PiFlowerLotusFill,
+  PiGlobeHemisphereWestFill,
+  PiHandshakeFill,
+  PiHouseFill
+} from "react-icons/pi";
+
 const services = [
   {
     title: "London Residential",
     description:
       "Sophisticated renovations and new-build homes in the heart of the capital, blending heritage character with modern luxury.",
-    icon: "home_pin"
+    icon: PiHouseFill
   },
   {
     title: "Feasibility Studies",
     description:
       "Deep-dive technical assessments and planning strategy to unlock the true potential and value of your site before you build.",
-    icon: "analytics"
+    icon: PiChartLineUpFill
   },
   {
     title: "Wellness & Retreat",
     description:
       "Designing restorative spaces that prioritize health, mindfulness, and a seamless connection to the natural environment.",
-    icon: "spa",
+    icon: PiFlowerLotusFill,
     featured: true,
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuACA31WLf1Bx7GaYTStoxa5lFPsFwcHxnKme_UOg7YToh7WurQj0dVaX9Qr7Abj8h90e56DWKrbE-CJVwL3KECAvaFPKRpP5kjuJHHk3hMi5NNcdDDjFTN1vELyUdWd-xak9K0lADrMKsMvoihxIT2sc3OfJ7fIKsE3c8RMK8SVSwCh6iLU9a91nKtdYbjWbgSidXrSkLzxbOvGEIRT_ftwxFAbrLs6EKqVRBGMC5OOZ8_XCGa4W1jqMIHxgjABZr6lk1NOAjhyww"
@@ -24,19 +34,19 @@ const services = [
     title: "Concept & International",
     description:
       "Visionary concepts and remote design consultancy for global clients seeking our signature aesthetic abroad.",
-    icon: "public"
+    icon: PiGlobeHemisphereWestFill
   },
   {
     title: "3D Scanning & BIM",
     description:
       "Utilizing cutting-edge lidar technology to create perfect digital twins of existing structures for absolute design precision.",
-    icon: "view_in_ar"
+    icon: PiCubeTransparentFill
   },
   {
     title: "Property Advisory",
     description:
       "Strategic guidance for investors and portfolio holders, aligning architectural vision with commercial viability.",
-    icon: "real_estate_agent"
+    icon: PiHandshakeFill
   }
 ];
 
@@ -46,6 +56,7 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => {
+            const Icon = service.icon;
             const isFeatured = service.featured;
 
             return (
@@ -73,9 +84,7 @@ export default function Services() {
                       isFeatured ? "text-primary" : "text-secondary"
                     }`}
                   >
-                    <span className="material-symbols-outlined text-5xl font-extralight">
-                      {service.icon}
-                    </span>
+                    <Icon size={42} />
                   </div>
 
                   <h3 className="font-display mb-4 text-2xl">
@@ -95,14 +104,10 @@ export default function Services() {
 
                 <a
                   href="#"
-                  className={`relative z-10 flex items-center gap-2 text-xs font-medium tracking-widest uppercase transition-all group-hover:gap-4 ${
-                    isFeatured ? "text-primary" : "text-primary"
-                  }`}
+                  className="text-primary relative z-10 flex items-center gap-2 text-xs font-medium tracking-widest uppercase transition-all group-hover:gap-4"
                 >
                   Explore Service
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
+                  <PiArrowRightFill size={14} />
                 </a>
               </div>
             );
