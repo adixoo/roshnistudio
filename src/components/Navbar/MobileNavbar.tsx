@@ -115,7 +115,7 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
             <motion.div variants={itemVariants}>
               <Link
                 href={link.href}
-                className="font-serif text-6xl tracking-tight transition-all hover:italic md:text-8xl"
+                className="font-serif text-6xl tracking-tight transition-all md:text-8xl"
                 onClick={onClose}
               >
                 {link.title}

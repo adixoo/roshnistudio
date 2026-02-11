@@ -4,7 +4,7 @@ const Footer = () => (
       <div className="mb-20 grid grid-cols-1 gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
           <h2 className="font-display mb-8 text-2xl tracking-widest uppercase">
-            KYLE MILLS
+            ROSHNI STUDIO
           </h2>
           <p className="max-w-xs leading-relaxed opacity-60">
             A design practice dedicated to human-centric architecture and the
