@@ -171,6 +171,13 @@
     background-color: #f2ede4;
     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuB_NYVxn4qUXEg799ts8fyB3MMJwHKTrDhS_rs6d2aXD8ic4GngaHQu8MAsAjXGvUFj3XN4exNme8W5fXaTQyEw1P5Tpv6SnGc13ZYe1tyiUhPPZlp6Bz-2r6jBeEsvQJAl9hst-JcbWiDsD8DlyqR52bXTt5avlYXfzHzwNEZgKziMClMfW3tbu0v7KX2pWH2oAm1zJhVlDuBSv6iE3Ydbq-hs_YICiFYHzAfsVYvl2ZoffGODj_KKl3_FSNHM-HFvYlfh_PruhQ);
   }
+  .project-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0) 40%
+    );
+  }
 }
 
 /* :root {
