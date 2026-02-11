@@ -68,7 +68,9 @@ const navLinks = [
   { title: "Home", href: "/" },
   { title: "The Studio", href: "/profile" },
   { title: "Projects", href: "/projects" },
-  { title: "Services", href: "/services" }
+  { title: "Services", href: "/services" },
+  { title: "Let's Connect", href: "/contact" }
+
   //   { title: "Culture", href: "/" },
   //   { title: "Contact", href: "/" }
 ];
@@ -80,7 +82,7 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="fixed top-0 left-0 z-50 flex h-screen w-full origin-top flex-col justify-between bg-[#F2EFE9] p-10 text-[#222]"
+      className="fixed top-0 left-0 z-50 flex h-dvh w-full origin-top flex-col justify-between bg-[#F2EFE9] p-10 text-[#222] md:hidden"
     >
       <div className="flex justify-end">
         <button

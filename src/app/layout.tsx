@@ -111,12 +111,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-          rel="stylesheet"
-        />
-      </head>
       <body className={`${sans.variable} ${serif.variable} antialiased`}>
         <ReactLenis root>
           <Header />

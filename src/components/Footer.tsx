@@ -1,8 +1,8 @@
 const Footer = () => (
   <footer className="bg-sand-50 px-6 pt-24 pb-12">
     <div className="mx-auto max-w-7xl">
-      <div className="mb-20 grid gap-12 md:grid-cols-4">
-        <div className="col-span-2">
+      <div className="mb-20 grid grid-cols-1 gap-12 md:grid-cols-4">
+        <div className="md:col-span-2">
           <h2 className="font-display mb-8 text-2xl tracking-widest uppercase">
             KYLE MILLS
           </h2>

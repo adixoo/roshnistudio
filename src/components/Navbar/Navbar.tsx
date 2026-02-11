@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import MobileNavbar from "./MobileNavbar";
 
+import { HiOutlineMenuAlt4 as MenuIcon } from "react-icons/hi";
+
 const NAV_LINKS = [
   { label: "The Studio", href: "/profile" },
   { label: "Projects", href: "/projects" },
@@ -47,7 +49,7 @@ export default function Header() {
             onClick={() => setIsOpen(true)}
             className="text-sm font-medium tracking-widest uppercase md:hidden"
           >
-            Menu
+            <MenuIcon className="size-8" />
           </button>
 
           <AnimatePresence>
