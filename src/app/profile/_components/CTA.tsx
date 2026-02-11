@@ -1,25 +1,22 @@
+import { Button } from "@/components/ui/button";
+
 export default function CTA() {
   return (
     <section className="py-32">
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="bg-accent text-accent-cream flex flex-col justify-center p-12 md:p-20">
-            <h3 className="font-display mb-6 text-4xl italic">
+          <div className="bg-accent flex flex-col justify-center p-12 md:p-20">
+            <h3 className="mb-6 font-serif text-5xl text-white italic">
               Meaningful Places
             </h3>
-            <p className="mb-8 text-lg leading-relaxed opacity-70">
+            <p className="mb-8 leading-relaxed text-white/70">
               Our studio specializes in residential and wellness design. We
               believe that the environments we inhabit profoundly influence our
               mental and physical well-being.
             </p>
-            <a className="group inline-flex items-center gap-2" href="#">
-              <span className="border-accent-cream border-b pb-1 text-sm font-bold tracking-widest uppercase">
-                View Projects
-              </span>
-              <span className="material-icons-outlined transition-transform group-hover:translate-x-2">
-                arrow_forward
-              </span>
-            </a>
+            <Button variant="secondary" className="w-max">
+              View projects
+            </Button>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img

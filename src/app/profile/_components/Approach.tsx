@@ -1,5 +1,40 @@
 import { Badge } from "@/components/ui/badge";
 
+const steps = [
+  {
+    number: "01",
+    title: "1. Listen",
+    icon: "psychology",
+    description:
+      "Every project begins with understanding. We dive deep into your rituals, needs, and aspirations for the space.",
+    iconClass: "bg-primary dark:bg-accent-cream dark:text-primary text-white"
+  },
+  {
+    number: "02",
+    title: "2. Test",
+    icon: "science",
+    description:
+      "We explore multiple directions through sketching, modeling, and light studies to find the perfect resonance.",
+    iconClass: "bg-charcoal text-primary"
+  },
+  {
+    number: "03",
+    title: "3. Design",
+    icon: "architecture",
+    description:
+      "Refining the chosen concept into a detailed architectural language, focusing on materiality and craft.",
+    iconClass: "bg-primary dark:bg-accent-cream dark:text-primary text-white"
+  },
+  {
+    number: "04",
+    title: "4. Deliver",
+    icon: "home_work",
+    description:
+      "Meticulous oversight during construction ensures that the initial vision is realized to the highest standard.",
+    iconClass: "bg-primary dark:bg-accent-cream dark:text-primary text-white"
+  }
+];
+
 export default function Approach() {
   return (
     <section className="py-32">
@@ -11,73 +46,38 @@ export default function Approach() {
               How We Work
             </h2>
           </div>
-          <p className="text-charcoal/80 max-w-md text-sm leading-relaxed tracking-wider">
+          <p className="text-charcoal/80 max-w-md leading-relaxed">
             Our process is iterative, transparent, and deeply collaborative. We
             believe the best results come from a shared vision.
           </p>
         </div>
+
         <div className="relative grid gap-12 md:grid-cols-4">
-          <div className="group relative">
-            <div className="font-display pointer-events-none absolute -top-16 -left-4 text-[120px] opacity-5">
-              01
-            </div>
-            <div className="space-y-6 pt-4">
-              <div className="bg-primary dark:bg-accent-cream dark:text-primary relative flex h-12 w-12 items-center justify-center text-white">
-                <span className="material-icons-outlined">psychology</span>
+          {steps.map((step, index) => (
+            <div key={index} className="group relative">
+              <div className="pointer-events-none absolute -top-16 -left-4 font-serif text-[9rem] opacity-10">
+                {step.number}
               </div>
-              <h4 className="font-display text-xl font-bold">1. Listen</h4>
-              <p className="text-primary/70 dark:text-accent-cream/70 text-sm leading-relaxed">
-                Every project begins with understanding. We dive deep into your
-                rituals, needs, and aspirations for the space.
-              </p>
-            </div>
-          </div>
-          <div className="group relative">
-            <div className="font-display pointer-events-none absolute -top-16 -left-4 text-[120px] opacity-5">
-              02
-            </div>
-            <div className="space-y-6 pt-4">
-              <div className="bg-charcoal text-primary flex h-12 w-12 items-center justify-center">
-                <span className="material-icons-outlined">science</span>
+
+              <div className="space-y-6 pt-4">
+                <div
+                  className={`bg-charcoal relative flex h-12 w-12 items-center justify-center`}
+                >
+                  <span className="material-icons-outlined text-white">
+                    {step.icon}
+                  </span>
+                </div>
+
+                <h4 className="text-charcoal font-serif text-2xl font-bold">
+                  {step.title}
+                </h4>
+
+                <p className="text-charcoal/70 dark:text-accent-cream/70 leading-relaxed">
+                  {step.description}
+                </p>
               </div>
-              <h4 className="font-display text-xl font-bold">2. Test</h4>
-              <p className="text-primary/70 dark:text-accent-cream/70 text-sm leading-relaxed">
-                We explore multiple directions through sketching, modeling, and
-                light studies to find the perfect resonance.
-              </p>
             </div>
-          </div>
-          <div className="group relative">
-            <div className="font-display pointer-events-none absolute -top-16 -left-4 text-[120px] opacity-5">
-              03
-            </div>
-            <div className="space-y-6 pt-4">
-              <div className="bg-primary dark:bg-accent-cream dark:text-primary flex h-12 w-12 items-center justify-center text-white">
-                <span className="material-icons-outlined">architecture</span>
-              </div>
-              <h4 className="font-display text-xl font-bold">3. Design</h4>
-              <h4 className="font-display text-xl font-bold" />
-              <p className="text-primary/70 dark:text-accent-cream/70 text-sm leading-relaxed">
-                Refining the chosen concept into a detailed architectural
-                language, focusing on materiality and craft.
-              </p>
-            </div>
-          </div>
-          <div className="group relative">
-            <div className="font-display pointer-events-none absolute -top-16 -left-4 text-[120px] opacity-5">
-              04
-            </div>
-            <div className="space-y-6 pt-4">
-              <div className="bg-primary dark:bg-accent-cream dark:text-primary flex h-12 w-12 items-center justify-center text-white">
-                <span className="material-icons-outlined">home_work</span>
-              </div>
-              <h4 className="font-display text-xl font-bold">4. Deliver</h4>
-              <p className="text-primary/70 dark:text-accent-cream/70 text-sm leading-relaxed">
-                Meticulous oversight during construction ensures that the
-                initial vision is realized to the highest standard.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
