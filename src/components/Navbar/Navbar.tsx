@@ -1,12 +1,13 @@
 "use client";
 
 import { AnimatePresence } from "motion/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { HiOutlineMenuAlt4 as MenuIcon } from "react-icons/hi";
+import logo from "../../../public/logo.png";
 import { Button } from "../ui/button";
 import MobileNavbar from "./MobileNavbar";
-
-import { HiOutlineMenuAlt4 as MenuIcon } from "react-icons/hi";
 
 const NAV_LINKS = [
   { label: "The Studio", href: "/profile" },
@@ -21,10 +22,14 @@ export default function Header() {
     <header className="bg-primary-foreground/90 fixed top-0 z-50 w-full border-b border-white/5 backdrop-blur-sm">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 text-white md:h-20">
         <Link
-          className="font-serif text-lg tracking-[0.3em] uppercase sm:text-xl"
+          className="bg-sand-50 flex size-10 items-center justify-center rounded font-serif text-lg tracking-[0.3em] uppercase sm:text-xl"
           href="/"
         >
-          ROSHNI STUDIO
+          <Image
+            src={logo}
+            alt="Roshni Design Studio Logo"
+            className="h-[60%] w-[60%]"
+          />
         </Link>
 
         <div className="flex items-center gap-12">
