@@ -1,6 +1,7 @@
 // components/MenuOverlay.tsx
 "use client";
 
+import { StudioInfo } from "@/constant/info";
 import { motion, Variants } from "motion/react";
 import Link from "next/link";
 
@@ -131,9 +132,31 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
         transition={{ delay: 0.8 }}
         className="mt-20 flex gap-6 text-sm font-light"
       >
-        <Link href="#">Instagram</Link>
-        <Link href="#">Facebook</Link>
-        <Link href="#">LinkedIn</Link>
+        <a
+          className="nav-link relative"
+          href={StudioInfo.Instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          className="nav-link relative"
+          href={StudioInfo.Pinterest}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Pinterest
+        </a>
+        <a
+          className="nav-link relative"
+          href={StudioInfo.Pinterest}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Whatsapp
+        </a>
       </motion.div>
     </motion.div>
   );
