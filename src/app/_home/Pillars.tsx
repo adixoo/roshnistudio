@@ -49,7 +49,7 @@ export default function Pillars() {
             >
               {/* Text Content */}
               <div className="flex-1 md:max-w-[42%]">
-                <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">
+                <span className="text-primary mb-6 block text-xs font-bold tracking-widest uppercase">
                   {pillar.id} / {pillar.category}
                 </span>
                 <h2 className="mb-8 font-serif text-4xl leading-[1.1] md:text-6xl">

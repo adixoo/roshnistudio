@@ -67,7 +67,7 @@ export default function Projects() {
 
               <div className="flex items-center justify-between">
                 <h3 className="text-xl md:text-2xl">{project.title}</h3>
-                <span className="text-[10px] font-bold tracking-widest uppercase opacity-60">
+                <span className="text-xs font-bold tracking-widest uppercase opacity-60">
                   {project.location}
                 </span>
               </div>

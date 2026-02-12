@@ -6,12 +6,12 @@ export default function CTA() {
     <section className="bg-sand-50 px-4 py-24" id="contact">
       <div className="bg-accent relative mx-auto max-w-7xl overflow-hidden p-16 text-center md:p-32 md:text-left">
         <div className="relative grid items-center gap-16 md:grid-cols-2">
-          <div>
-            <h2 className="mb-8 font-serif text-5xl leading-[1.1] text-white md:text-7xl">
+          <div className="space-y-8">
+            <h2 className="font-serif text-5xl leading-[1.1] text-white md:text-7xl">
               Ready to evolve <br />
               your space?
             </h2>
-            <p className="mb-10 max-w-md text-lg font-light text-white/80">
+            <p className="max-w-md text-lg font-light text-white/80">
               Begin the conversation about your next architectural project. We
               work globally with clients who value intention and atmosphere.
             </p>
