@@ -6,6 +6,7 @@ const Philosophy = dynamic(() => import("./_home/Philosphy"));
 const Pillars = dynamic(() => import("./_home/Pillars"));
 const Projects = dynamic(() => import("./_home/Projects"));
 const CTA = dynamic(() => import("./_home/CTA"));
+const Testimonials = dynamic(() => import("./_home/Testimonials"));
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Expertise />
       <Projects />
 
+      <Testimonials />
       <section className="border-primary/5 bg-sand-50 border-y px-6 py-24">
         <div className="mx-auto max-w-6xl text-center">
           <blockquote className="mb-8 font-serif text-4xl leading-snug italic md:text-6xl">
