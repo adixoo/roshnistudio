@@ -14,7 +14,7 @@ export default function Philosophy() {
           </div>
           <div className="order-1 md:order-2">
             <Badge variant={"text"}>Our Belief</Badge>
-            <h2 className="mb-8 font-serif text-5xl leading-tight md:text-6xl">
+            <h2 className="mb-8 font-serif text-5xl leading-[1.1] md:text-6xl">
               A vessel for <br />
               mindfulness.
             </h2>

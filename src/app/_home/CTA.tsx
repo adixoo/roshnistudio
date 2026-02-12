@@ -7,7 +7,7 @@ export default function CTA() {
       <div className="bg-accent relative mx-auto max-w-7xl overflow-hidden p-16 text-center md:p-32 md:text-left">
         <div className="relative grid items-center gap-16 md:grid-cols-2">
           <div>
-            <h2 className="mb-8 font-serif text-5xl text-white md:text-7xl">
+            <h2 className="mb-8 font-serif text-5xl leading-[1.1] text-white md:text-7xl">
               Ready to evolve <br />
               your space?
             </h2>

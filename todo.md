@@ -10,3 +10,9 @@
 - Home page done
 
 ## Text Size
+
+- Home page done
+
+## Leading
+
+- home page done
