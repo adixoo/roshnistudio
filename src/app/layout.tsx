@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Navbar/Navbar";
+import { ApplicationUrl } from "@/lib/appUrl";
 import ReactLenis from "lenis/react";
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
@@ -19,7 +20,7 @@ const serif = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://roshnistudio.com"),
+  metadataBase: new URL(ApplicationUrl),
   title: {
     default: "Roshni Design Studio | London Residential & Wellness Architects",
     template: "%s | Roshni Design Studio"
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   }
 };
 export const viewport: Viewport = {
-  themeColor: "#181b1e"
+  themeColor: "#faf8f5"
   // colorScheme: "dark"
 };
 

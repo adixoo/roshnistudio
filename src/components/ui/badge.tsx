@@ -14,7 +14,7 @@ const badgeVariants = cva(
           "bg-primary-foreground text-primary px-4 py-2  tracking-[0.3em]",
 
         // TEXT ONLY
-        text: "text-primary tracking-[0.3em]",
+        text: "text-primary tracking-[0.2em] text-sm",
 
         destructive: "bg-destructive text-white px-3 py-1 rounded-full",
 

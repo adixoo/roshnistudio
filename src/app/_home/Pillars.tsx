@@ -1,3 +1,5 @@
+import { Badge } from "@/components/ui/badge";
+
 const PILLARS = [
   {
     id: "01",
@@ -49,9 +51,9 @@ export default function Pillars() {
             >
               {/* Text Content */}
               <div className="flex-1 md:max-w-[42%]">
-                <span className="text-primary mb-6 block text-xs font-bold tracking-widest uppercase">
+                <Badge variant="text" className="mb-4">
                   {pillar.id} / {pillar.category}
-                </span>
+                </Badge>
                 <h2 className="mb-8 font-serif text-4xl leading-[1.1] md:text-6xl">
                   {pillar.title}
                 </h2>
