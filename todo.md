@@ -1,9 +1,10 @@
-- Hero me `book a consultation` button add karna hai, jab click hoga top popup open hogs jisme calendly popup hoga jisse meeting book kar skte hai
-- pillar pe colors fix karna hai
-- pillar pe looping add karwani hai
-- services me heading shi karni hai, our expertise, jo ki center me hogi
-- selected works me button aur font shi karna hai
-- CTA me button aur image shi karni hai
+https://ui.aceternity.com/components/parallax-scroll
+https://magicui.design/docs/components/pixel-image
+https://www.cult-ui.com/docs/components/stripe-bg-guides
+
+- Consultation overlay me text shi karna hai
+- logo marquee add karna hai
+- testimonials add karna hai
 
 ## Colors
 

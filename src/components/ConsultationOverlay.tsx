@@ -28,17 +28,14 @@ export default function ConsultationOverlay({
 }
 
 function ConsultationOverlayContent() {
-  const { isExpanded, collapse } = useExpandableScreen();
+  const { collapse } = useExpandableScreen();
 
   return (
     <>
       <ExpandableScreenContent className="bg-white" showCloseButton={false}>
         <div className="flex h-full items-center justify-center p-8">
           <div className="text-primary-foreground text-4xl">
-            Full Screen Content
-            <p className="mt-4 text-lg">
-              Is expanded: {isExpanded ? "Yes" : "No"}
-            </p>
+            Calendly Link
             <button
               onClick={collapse}
               className="mt-6 underline underline-offset-4"
