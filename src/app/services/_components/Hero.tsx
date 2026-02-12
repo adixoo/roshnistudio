@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-32 pb-20 lg:pt-48 lg:pb-32">
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
+      <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="max-w-3xl">
           <Badge>Specialized Expertise</Badge>
           <h1 className="text-charcoal mb-8 font-serif text-5xl leading-tight lg:text-7xl">
