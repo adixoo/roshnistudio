@@ -1,3 +1,5 @@
+import { StudioInfo } from "@/constant/info";
+
 const Footer = () => (
   <footer className="bg-sand-50 px-6 pt-24 pb-12">
     <div className="mx-auto max-w-7xl">
@@ -11,6 +13,7 @@ const Footer = () => (
             pursuit of quiet beauty.
           </p>
         </div>
+
         <div>
           <h4 className="mb-6 text-xs font-bold tracking-widest uppercase">
             Contact
@@ -18,33 +21,63 @@ const Footer = () => (
           <ul className="space-y-4 text-sm opacity-80">
             <li>
               <a
-                className="hover:underline"
-                href="mailto:hello@kylemills.design"
+                className="nav-link relative"
+                href={`mailto:${StudioInfo.Email}`}
               >
-                hello@kylemills.design
+                {StudioInfo.Email}
               </a>
             </li>
-            <li>+1 (910) 626-85255</li>
-            <li>123 Fifth Avenue, New York, NY</li>
+
+            <li>
+              <a
+                className="nav-link relative"
+                href={`tel:${StudioInfo.Phone.replace(/\s/g, "")}`}
+              >
+                {StudioInfo.Phone}
+              </a>
+            </li>
+
+            <li>
+              {StudioInfo.Hours} <br />
+              {StudioInfo.WorkingDays}
+            </li>
           </ul>
         </div>
+
         <div>
           <h4 className="mb-6 text-xs font-bold tracking-widest uppercase">
             Follow
           </h4>
           <div className="flex space-x-6 text-sm opacity-80">
-            <a className="transition-opacity hover:opacity-60" href="#">
+            <a
+              className="nav-link relative"
+              href={StudioInfo.Instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Instagram
             </a>
-            <a className="transition-opacity hover:opacity-60" href="#">
-              LinkedIn
+
+            <a
+              className="nav-link relative"
+              href={StudioInfo.Pinterest}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pinterest
             </a>
-            <a className="transition-opacity hover:opacity-60" href="#">
-              Journal
+            <a
+              className="nav-link relative"
+              href={StudioInfo.Pinterest}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Whatsapp
             </a>
           </div>
         </div>
       </div>
+
       <div className="border-primary/5 flex flex-col items-center justify-between space-y-4 border-t pt-12 text-[10px] tracking-widest uppercase opacity-40 md:flex-row md:space-y-0">
         <p>© 2026 Roshni Studio. All rights reserved.</p>
         <div className="flex space-x-8">
@@ -59,4 +92,5 @@ const Footer = () => (
     </div>
   </footer>
 );
+
 export default Footer;
