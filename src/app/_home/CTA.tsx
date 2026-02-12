@@ -1,10 +1,11 @@
+import ConsultationOverlay from "@/components/ConsultationOverlay";
 import { Button } from "@/components/ui/button";
 
 export default function CTA() {
   return (
     <section className="bg-sand-50 px-4 py-24" id="contact">
       <div className="bg-accent relative mx-auto max-w-7xl overflow-hidden p-16 text-center md:p-32 md:text-left">
-        <div className="relative z-10 grid items-center gap-16 md:grid-cols-2">
+        <div className="relative grid items-center gap-16 md:grid-cols-2">
           <div>
             <h2 className="mb-8 font-serif text-5xl text-white md:text-7xl">
               Ready to evolve <br />
@@ -14,7 +15,9 @@ export default function CTA() {
               Begin the conversation about your next architectural project. We
               work globally with clients who value intention and atmosphere.
             </p>
-            <Button variant={"secondary"}>Book a consultation</Button>
+            <ConsultationOverlay layoutId="cta">
+              <Button variant={"secondary"}>Book a consultation</Button>
+            </ConsultationOverlay>
           </div>
           <div className="hidden md:block">
             <img
