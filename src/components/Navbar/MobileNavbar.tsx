@@ -90,7 +90,6 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
           onClick={onClose}
           className="rounded-full border border-black/20 p-4 transition-colors hover:bg-black/5"
         >
-          {/* Close Icon (X) */}
           <svg
             width="24"
             height="24"
@@ -101,10 +100,11 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
           >
             <path d="M18 6L6 18M6 6l12 12" />
           </svg>
+          <span className="sr-only">Close menu</span>
         </button>
       </div>
 
-      <motion.div
+      <motion.nav
         variants={containerVariants}
         initial="initial"
         animate="open"
@@ -124,7 +124,7 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
             </motion.div>
           </div>
         ))}
-      </motion.div>
+      </motion.nav>
 
       <motion.div
         initial={{ opacity: 0 }}

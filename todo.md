@@ -4,3 +4,8 @@
 - services me heading shi karni hai, our expertise, jo ki center me hogi
 - selected works me button aur font shi karna hai
 - CTA me button aur image shi karni hai
+
+## Colors
+
+- White
+- Charcoal

@@ -15,9 +15,9 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="mb-6 text-xs font-bold tracking-widest uppercase">
+          <h3 className="mb-6 text-xs font-bold tracking-widest uppercase">
             Contact
-          </h4>
+          </h3>
           <ul className="space-y-4 text-sm opacity-80">
             <li>
               <a
@@ -45,9 +45,9 @@ const Footer = () => (
         </div>
 
         <div>
-          <h4 className="mb-6 text-xs font-bold tracking-widest uppercase">
+          <h3 className="mb-6 text-xs font-bold tracking-widest uppercase">
             Follow
-          </h4>
+          </h3>
           <div className="flex space-x-6 text-sm opacity-80">
             <a
               className="nav-link relative"
