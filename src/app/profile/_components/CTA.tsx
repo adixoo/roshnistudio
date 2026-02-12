@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -14,9 +15,11 @@ export default function CTA() {
               believe that the environments we inhabit profoundly influence our
               mental and physical well-being.
             </p>
-            <Button variant="secondary" className="w-max">
-              View projects
-            </Button>
+            <Link href="/projects" prefetch={false}>
+              <Button variant="secondary" className="w-max">
+                View projects
+              </Button>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img

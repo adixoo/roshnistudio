@@ -1,6 +1,36 @@
 import FormComponent from "./_components/Form";
 import Hero from "./_components/Hero";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact | London Residential & Wellness Architects",
+  description:
+    "Contact Roshni Design Studio, London-based architects specialising in private homes, wellness retreats, and pre-purchase feasibility studies.",
+  keywords: [
+    "Architect London contact",
+    "Book architectural consultation London",
+    "Pre-purchase feasibility architect",
+    "Residential architect enquiry",
+    "Wellness architect UK"
+  ],
+
+  openGraph: {
+    title: "Contact Roshni Design Studio",
+    description:
+      "Get in touch to discuss residential architecture, wellness projects, feasibility studies, or UK property advisory services.",
+    url: "https://roshnistudio.com/contact",
+    siteName: "Roshni Design Studio",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Roshni Design Studio",
+    description:
+      "Book a consultation for residential or wellness architecture projects."
+  }
+};
+
 export default function Contact() {
   return (
     <div className="bg-sand-50">

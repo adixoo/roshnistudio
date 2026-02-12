@@ -1,5 +1,36 @@
 import { PiArrowUpRight } from "react-icons/pi";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Architecture Portfolio | Residential & Wellness Projects",
+  description:
+    "Explore residential, wellness, and retreat architecture projects by Roshni Design Studio across London and internationally.",
+  keywords: [
+    "London architecture portfolio",
+    "Residential architecture projects London",
+    "Wellness architecture portfolio",
+    "Retreat architecture projects",
+    "Luxury residential design UK"
+  ],
+  alternates: {
+    canonical: "https://roshnistudio.com/projects"
+  },
+  openGraph: {
+    title: "Architecture Portfolio - Roshni Design Studio",
+    description:
+      "Residential, wellness, and retreat architecture projects across London and internationally.",
+    url: "https://roshnistudio.com/projects",
+    siteName: "Roshni Design Studio",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Architecture Portfolio - Roshni Design Studio",
+    description: "Explore our residential and wellness architecture projects."
+  }
+};
+
 export default function Projects() {
   const projects = [
     {
