@@ -1,13 +1,13 @@
-import React, { useRef, useLayoutEffect, useState } from 'react';
 import {
   motion,
+  useAnimationFrame,
+  useMotionValue,
   useScroll,
   useSpring,
   useTransform,
-  useMotionValue,
-  useVelocity,
-  useAnimationFrame
-} from 'motion/react';
+  useVelocity
+} from "motion/react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 interface VelocityMapping {
   input: [number, number];
@@ -44,7 +44,9 @@ interface ScrollVelocityProps {
   scrollerStyle?: React.CSSProperties;
 }
 
-function useElementWidth<T extends HTMLElement>(ref: React.RefObject<T | null>): number {
+function useElementWidth<T extends HTMLElement>(
+  ref: React.RefObject<T | null>
+): number {
   const [width, setWidth] = useState(0);
 
   useLayoutEffect(() => {
@@ -54,8 +56,8 @@ function useElementWidth<T extends HTMLElement>(ref: React.RefObject<T | null>):
       }
     }
     updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
   }, [ref]);
 
   return width;
@@ -65,7 +67,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
   scrollContainerRef,
   texts = [],
   velocity = 100,
-  className = '',
+  className = "",
   damping = 50,
   stiffness = 400,
   numCopies = 6,
@@ -79,7 +81,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     children,
     baseVelocity = velocity,
     scrollContainerRef,
-    className = '',
+    className = "",
     damping,
     stiffness,
     numCopies,
@@ -90,7 +92,9 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     scrollerStyle
   }: VelocityTextProps) {
     const baseX = useMotionValue(0);
-    const scrollOptions = scrollContainerRef ? { container: scrollContainerRef } : {};
+    const scrollOptions = scrollContainerRef
+      ? { container: scrollContainerRef }
+      : {};
     const { scrollY } = useScroll(scrollOptions);
     const scrollVelocity = useVelocity(scrollY);
     const smoothVelocity = useSpring(scrollVelocity, {
@@ -113,8 +117,8 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
       return mod + min;
     }
 
-    const x = useTransform(baseX, v => {
-      if (copyWidth === 0) return '0px';
+    const x = useTransform(baseX, (v) => {
+      if (copyWidth === 0) return "0px";
       return `${wrap(-copyWidth, 0, v)}px`;
     });
 
@@ -135,16 +139,23 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
     const spans = [];
     for (let i = 0; i < numCopies!; i++) {
       spans.push(
-        <span className={`flex-shrink-0 ${className}`} key={i} ref={i === 0 ? copyRef : null}>
+        <span
+          className={`flex-shrink-0 ${className}`}
+          key={i}
+          ref={i === 0 ? copyRef : null}
+        >
           {children}
         </span>
       );
     }
 
     return (
-      <div className={`${parallaxClassName} relative overflow-hidden`} style={parallaxStyle}>
+      <div
+        className={`${parallaxClassName} relative overflow-hidden`}
+        style={parallaxStyle}
+      >
         <motion.div
-          className={`${scrollerClassName} flex whitespace-nowrap text-center font-sans text-4xl font-bold tracking-[-0.02em] drop-shadow md:text-[5rem] md:leading-[5rem]`}
+          className={`${scrollerClassName} flex text-center font-sans text-4xl font-bold tracking-[-0.02em] whitespace-nowrap drop-shadow md:text-[5rem] md:leading-[5rem]`}
           style={{ x, ...scrollerStyle }}
         >
           {spans}
