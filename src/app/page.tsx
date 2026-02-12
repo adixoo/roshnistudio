@@ -22,7 +22,7 @@ export default function Home() {
             Design is not just what it looks like and feels like. Design is how
             it works for the soul.
           </blockquote>
-          <cite className="text-sm font-medium tracking-widest uppercase not-italic opacity-60">
+          <cite className="font-medium tracking-widest uppercase not-italic opacity-60">
             — Kyle Mills, Principal Architect
           </cite>
         </div>

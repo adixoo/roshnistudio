@@ -52,7 +52,7 @@ export default function Pillars() {
                 <span className="text-primary mb-4 block text-xs font-bold tracking-widest uppercase">
                   {pillar.id} / {pillar.category}
                 </span>
-                <h2 className="mb-8 font-serif text-4xl md:text-5xl">
+                <h2 className="mb-8 font-serif text-4xl md:text-6xl">
                   {pillar.title}
                 </h2>
                 <p className="text-primary-foreground/80 mb-6 leading-relaxed">

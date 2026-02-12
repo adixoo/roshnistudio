@@ -7,5 +7,6 @@
 
 ## Colors
 
-- White
-- Charcoal
+- Home page done
+
+## Text Size

@@ -30,7 +30,7 @@ export default function Expertise() {
     <section className="bg-sand-50 border-primary-foreground/5 border-y py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-20 text-center">
-          <h2 className="mb-4 font-serif text-4xl md:text-5xl">
+          <h2 className="mb-4 font-serif text-4xl md:text-6xl">
             Our Expertise
           </h2>
           <div className="bg-primary mx-auto h-px w-24" />
@@ -46,13 +46,13 @@ export default function Expertise() {
                 {item.id}
               </span>
 
-              <h3 className="mt-6 mb-4 font-serif text-2xl">{item.title}</h3>
+              <h3 className="mt-6 mb-4 font-serif text-3xl">{item.title}</h3>
 
-              <p className="text-charcoal/60 dark:text-sand/60 mb-8 text-sm leading-relaxed">
+              <p className="text-charcoal/80 dark:text-sand/60 mb-8 text-sm leading-relaxed">
                 {item.description}
               </p>
 
-              <ul className="text-charcoal/40 dark:text-sand/40 space-y-2 text-xs tracking-widest uppercase">
+              <ul className="text-charcoal/60 dark:text-sand/40 space-y-2 text-xs tracking-widest uppercase">
                 {item.points.map((point) => (
                   <li key={point}>• {point}</li>
                 ))}
