@@ -1,17 +1,11 @@
-import {
-  PiEnvelopeSimple,
-  PiFacebookLogo,
-  PiLinkedinLogo,
-  PiMapPin,
-  PiTwitterLogo,
-  PiWhatsappLogo
-} from "react-icons/pi";
 export default function FormComponent() {
   return (
-    <section className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-4 lg:grid-cols-3">
-      <div className="col-span-3 h-90 bg-white shadow"></div>
+    <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 lg:grid-cols-3 lg:gap-16">
+      <div className="flex h-90 items-center justify-center bg-white shadow lg:col-span-3">
+        Calendly link
+      </div>
       <Contact />
-      <div className="col-span-2">
+      <div className="lg:col-span-2">
         <div className="bg-white p-8 shadow">
           <h3 className="mb-6 border-b border-slate-100 pb-4 font-serif text-2xl dark:border-slate-800">
             Project Enquiry
@@ -97,6 +91,39 @@ export default function FormComponent() {
   );
 }
 
+import {
+  PiEnvelopeSimpleFill,
+  PiMapPinFill,
+  PiPhoneFill
+} from "react-icons/pi";
+
+import { StudioInfo } from "@/constant/info";
+
+const contactItems = [
+  {
+    label: "Telephone",
+    value: StudioInfo.Phone,
+    href: `tel:${StudioInfo.Phone.replace(/\s+/g, "")}`,
+    Icon: PiPhoneFill
+  },
+  {
+    label: "Email",
+    value: StudioInfo.Email,
+    href: `mailto:${StudioInfo.Email}`,
+    Icon: PiEnvelopeSimpleFill
+  },
+  {
+    label: "Working Hours",
+    value: `${StudioInfo.WorkingDays} | ${StudioInfo.Hours}`,
+    Icon: PiMapPinFill
+  }
+];
+
+const socialItems = [
+  { label: "Instagram", href: StudioInfo.Instagram },
+  { label: "Pinterest", href: StudioInfo.Pinterest }
+];
+
 function Contact() {
   return (
     <div className="space-y-8">
@@ -106,56 +133,44 @@ function Contact() {
         </h3>
 
         <div className="space-y-10">
-          {/* WhatsApp */}
-          <a
-            className="group flex items-start space-x-4"
-            href="https://wa.me/191062685255"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="text-primary group-hover:bg-primary rounded-full bg-slate-50 p-3 transition-all group-hover:text-white dark:bg-slate-800">
-              <PiWhatsappLogo size={20} />
-            </div>
-            <div>
-              <p className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">
-                WhatsApp
-              </p>
-              <p className="text-sm font-medium">+1 910-626-85255</p>
-            </div>
-          </a>
+          {contactItems.map(({ label, value, href, Icon }) => {
+            const isLink = Boolean(href);
 
-          {/* Email */}
-          <a
-            className="group flex items-start space-x-4"
-            href="mailto:contact@hello.com"
-          >
-            <div className="text-primary group-hover:bg-primary rounded-full bg-slate-50 p-3 transition-all group-hover:text-white dark:bg-slate-800">
-              <PiEnvelopeSimple size={20} />
-            </div>
-            <div>
-              <p className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">
-                Email Hub
-              </p>
-              <p className="text-sm font-medium">contact@hello.com</p>
-            </div>
-          </a>
+            const content = (
+              <>
+                <div className="text-primary group-hover:bg-primary bg-primary/10 p-3 transition-all group-hover:text-white">
+                  <Icon size={20} />
+                </div>
 
-          {/* Location */}
-          <div className="flex items-start space-x-4">
-            <div className="text-primary rounded-full bg-slate-50 p-3 dark:bg-slate-800">
-              <PiMapPin size={20} />
-            </div>
-            <div>
-              <p className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">
-                Studio Location
-              </p>
-              <p className="text-sm leading-relaxed font-medium">
-                123 Fifth Avenue,
-                <br />
-                New York, NY 10160
-              </p>
-            </div>
-          </div>
+                <div>
+                  <p className="text-[10px] font-bold tracking-[0.2em] text-slate-400 uppercase">
+                    {label}
+                  </p>
+                  <p className="text-sm font-medium">{value}</p>
+                </div>
+              </>
+            );
+
+            if (isLink) {
+              return (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start space-x-4"
+                >
+                  {content}
+                </a>
+              );
+            }
+
+            return (
+              <div key={label} className="flex items-start space-x-4">
+                {content}
+              </div>
+            );
+          })}
         </div>
 
         {/* Social */}
@@ -164,27 +179,18 @@ function Contact() {
             Follow Our Journey
           </p>
 
-          <div className="flex space-x-6">
-            <a
-              className="hover:text-primary text-slate-400 transition-colors"
-              href="#"
-            >
-              <PiFacebookLogo size={20} />
-            </a>
-
-            <a
-              className="hover:text-primary text-slate-400 transition-colors"
-              href="#"
-            >
-              <PiTwitterLogo size={20} />
-            </a>
-
-            <a
-              className="hover:text-primary text-slate-400 transition-colors"
-              href="#"
-            >
-              <PiLinkedinLogo size={20} />
-            </a>
+          <div className="flex space-x-6 text-sm font-medium">
+            {socialItems.map(({ label, href }) => (
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-charcoal/80 nav-link relative"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
