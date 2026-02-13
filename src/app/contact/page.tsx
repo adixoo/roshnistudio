@@ -1,4 +1,4 @@
-import FormComponent from "./_components/Form";
+import FormComponent from "./_components/FormComponent";
 import Hero from "./_components/Hero";
 
 import type { Metadata } from "next";

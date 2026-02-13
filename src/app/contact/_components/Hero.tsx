@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Hero() {
   return (
-    <section className="py-32 pt-40 text-white">
+    <section className="py-32 pt-40">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-4 md:flex-row">
         <div className="w-full md:w-1/2">
           <Badge>Contact roshni studio</Badge>
