@@ -8,7 +8,7 @@ export default function Loader() {
         src={logo}
         alt="Roshni Studio Logo"
         priority
-        className="w-40 md:w-60"
+        className="h-auto w-40"
       />
     </div>
   );

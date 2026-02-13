@@ -28,7 +28,7 @@ export default function Header() {
           <Image
             src={logo}
             alt="Roshni Design Studio Logo"
-            className="h-[60%] w-[60%]"
+            className="h-[60%] w-auto"
           />
         </Link>
 
