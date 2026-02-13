@@ -1,12 +1,15 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export default function Portfolio() {
   return (
-    <main className="pt-32 pb-24">
+    <div className="bg-sand-50 pt-32 pb-24">
       <section className="mb-16 px-6 text-center md:px-12">
         <div className="mx-auto max-w-4xl">
           <span className="mb-6 block text-[10px] tracking-[0.5em] uppercase opacity-60">
             Portfolio
           </span>
-          <h1 className="font-display mb-6 text-4xl font-medium md:text-6xl lg:text-7xl">
+          <h1 className="mb-6 font-serif text-4xl md:text-6xl lg:text-7xl">
             West London House Renovation
           </h1>
           <p className="text-xs tracking-[0.2em] uppercase opacity-70 md:text-sm">
@@ -25,16 +28,16 @@ export default function Portfolio() {
       </section>
       <section className="mb-20 px-6 text-center md:px-12">
         <div className="mx-auto max-w-3xl">
-          <p className="text-xl leading-relaxed font-light opacity-80 md:text-2xl">
+          <p className="text-charcoal text-xl leading-relaxed opacity-80 md:text-2xl">
             An extensive refurbishment and rear extension of a Victorian
             semi-detached house in West London.
           </p>
         </div>
       </section>
       <section className="mb-24">
-        <div className="bg-sand-200/50 w-full px-6 py-16 md:px-12 dark:bg-zinc-900">
+        <div className="bg-accent w-full px-6 py-16 md:px-12">
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-lg leading-relaxed font-light opacity-90 md:text-xl">
+            <p className="text-lg leading-relaxed font-light text-white opacity-90 md:text-xl">
               The project updates and expands the property, adding a calm,
               light-filled extension that connects the interior to the garden
               while respecting the scale and character of the original house.
@@ -53,7 +56,7 @@ export default function Portfolio() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsDcT_WjoiBVliZ5-eOPBjm36fBwRZrnyaxSnoYpUkb_Ycvc33jg8Ypinm0Z7ZbuLlH63Vu5eosbB0veJp1etroFq6bMkS_mGFdZvf8cOGqIfHVzRiOcXZBuCyIm2yscwtIcI2TnHfb52uoj7gqeoXDopsMSICQLzuiU5XC8j3hq0Pz6FEFAydo18IyHmqrpxmElIp4BUAKOu8jecAFizphbJyBS-zc-lHppl5v7Flbt5Ykuc8G0nL8S594mLR9PVmnblaxd5iHA"
                 />
               </div>
-              <span className="text-[10px] tracking-[0.3em] uppercase opacity-60">
+              <span className="text-[10px] tracking-[0.3em] uppercase">
                 Axonometric
               </span>
             </div>
@@ -65,7 +68,7 @@ export default function Portfolio() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNZbUPL7ApunBwWULen7z8JrZaoBUbDVETF6eSd41cL-RHg0jOCoAnIvS6PGzB9b63MBpIDvzDxfoysUhbEQjP5tJxuzGf3wouezAYh2WjjZCooJqLjJgxEUnrydNGmuAmzByXCmSjJMARBTjDerRZR8aPsNt44HQLU67z4xxUaCsKGIH-rK00UloBw60o8uuqoVgVwuVUtelLBcnZxuhy66hmAoIAFTC9R-_WTCnnT6sQQq8YU42LyqX3vweOIBS8PGKG0oF2PA"
                 />
               </div>
-              <span className="text-[10px] tracking-[0.3em] uppercase opacity-60">
+              <span className="text-[10px] tracking-[0.3em] uppercase">
                 Ground Floor Plan
               </span>
             </div>
@@ -77,7 +80,7 @@ export default function Portfolio() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5FYE0plTuNPzR1rBnkIocgZ-x6aHgAAx_o9IBE5HsewXn7CshixCZuhNDpNUBASyf1SNxRUQu8Pby0ieV5vSVvR--f3_NHbEoZMonDNcm3Tl7EJAsC_zkCMoBZUQEkzlMBK-COXrq6sV1kHt4BZScV1b7jSgx9M5eCEI9L6A6bcR69cq-7C2z6j5vs79dpdmmcWyHgFHBVoPJcJ25hd_q85MT7xijuX6VkKELyKUrKukqMYFom7ELu4Dzf-L81vgrCyzbkm7zlw"
                 />
               </div>
-              <span className="text-[10px] tracking-[0.3em] uppercase opacity-60">
+              <span className="text-[10px] tracking-[0.3em] uppercase">
                 First Floor Plan
               </span>
             </div>
@@ -86,24 +89,24 @@ export default function Portfolio() {
       </section>
       <section className="mb-32 px-6 md:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 text-center md:grid-cols-3">
-          <div className="bg-sand-200/30 p-10 dark:bg-zinc-900/50">
-            <h3 className="font-display mb-6 text-xl">Loft Conversion</h3>
+          <div className="bg-white p-10">
+            <h3 className="mb-6 font-serif text-2xl">Loft Conversion</h3>
             <ul className="space-y-3 text-sm font-light opacity-80">
               <li>New bedroom and shower room</li>
               <li>Extended loft level</li>
               <li>Integrated storage solutions</li>
             </ul>
           </div>
-          <div className="bg-sand-200/30 p-10 dark:bg-zinc-900/50">
-            <h3 className="font-display mb-6 text-xl">Rear Extension</h3>
+          <div className="bg-white p-10">
+            <h3 className="mb-6 font-serif text-2xl">Rear Extension</h3>
             <ul className="space-y-3 text-sm font-light opacity-80">
               <li>Open-plan, light-filled living</li>
               <li>Bespoke handcrafted kitchen</li>
               <li>Seamless garden connection</li>
             </ul>
           </div>
-          <div className="bg-sand-200/30 p-10 dark:bg-zinc-900/50">
-            <h3 className="font-display mb-6 text-xl">
+          <div className="bg-white p-10">
+            <h3 className="mb-6 font-serif text-2xl">
               Ground Floor Renovation
             </h3>
             <ul className="space-y-3 text-sm font-light opacity-80">
@@ -116,17 +119,16 @@ export default function Portfolio() {
       </section>
       <section className="px-6 text-center md:px-12">
         <div className="border-primary/10 dark:border-sand-100/10 mx-auto max-w-4xl border-y py-24">
-          <h2 className="font-display mb-10 text-4xl italic md:text-5xl">
-            Interested in a similar transformation?
+          <h2 className="mb-10 font-serif text-5xl md:text-6xl">
+            Interested in a similar <br /> transformation?
           </h2>
-          <a
-            className="border-primary dark:border-sand-100 inline-block border-b pb-2 text-sm tracking-[0.3em] uppercase transition-opacity hover:opacity-50"
-            href="mailto:studio@kylemills.com"
-          >
-            Inquire for Collaboration
-          </a>
+          <Link href="/contact">
+            <Button className="hover:bg-primary/80">
+              Inquire for a consultation
+            </Button>
+          </Link>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
