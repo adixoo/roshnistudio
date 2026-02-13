@@ -4,8 +4,19 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
 import * as z from "zod";
 
-// Individual Shadcn UI Components
+import { cn } from "@/lib/utils";
+
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldGroup,
+  FieldLabel
+} from "@/components/ui/field";
+
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { InputGroup } from "@/components/ui/input-group";
 import {
   Select,
   SelectContent,
@@ -15,7 +26,7 @@ import {
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 
-// 1. Define the Schema
+// Schema
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
   email: z.string().email("Please enter a valid email address."),
@@ -28,12 +39,7 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 export default function EnquiryForm() {
-  // 2. Initialize the form
-  const {
-    control,
-    handleSubmit,
-    formState: { isSubmitting }
-  } = useForm<FormValues>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -45,16 +51,12 @@ export default function EnquiryForm() {
     }
   });
 
-  // 3. Submit Handler
   function onSubmit(data: FormValues) {
     console.log("Form Submitted:", data);
   }
 
-  // Common styles to maintain your specific design
-  const labelStyles =
-    "text-[10px] font-bold tracking-widest text-slate-400 uppercase";
-  const inputStyles =
-    "border-none bg-slate-50 px-4 py-6 focus-visible:ring-1 focus-visible:ring-primary transition-all dark:bg-slate-800";
+  const baseInputStyles =
+    "border-none bg-charcoal/10 px-4 py-6 transition-all hover:bg-charcoal/15 focus:bg-white focus-visible:ring-1 focus-visible:ring-primary";
 
   return (
     <div className="lg:col-span-2">
@@ -63,175 +65,208 @@ export default function EnquiryForm() {
           Project Enquiry
         </h3>
 
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {/* Name Field */}
-            <Controller
-              name="name"
-              control={control}
-              render={({ field, fieldState }) => (
-                <div className="space-y-1">
-                  <label className={labelStyles}>Name</label>
-                  <Input
-                    {...field}
-                    placeholder="John Doe"
-                    className={`${inputStyles} ${fieldState.invalid ? "ring-1 ring-red-500" : ""}`}
-                  />
-                  {fieldState.error && (
-                    <p className="text-[10px] text-red-500">
-                      {fieldState.error.message}
-                    </p>
-                  )}
-                </div>
-              )}
-            />
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <FieldGroup>
+            {/* Name + Email */}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <Controller
+                name="name"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel>Name</FieldLabel>
+                    <Input
+                      {...field}
+                      placeholder="John Doe"
+                      className={cn(
+                        baseInputStyles,
+                        fieldState.invalid && "ring-1 ring-red-500"
+                      )}
+                      aria-invalid={fieldState.invalid}
+                    />
+                    <FieldDescription>
+                      Your full name as you’d like us to address you.
+                    </FieldDescription>
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
 
-            {/* Email Field */}
-            <Controller
-              name="email"
-              control={control}
-              render={({ field, fieldState }) => (
-                <div className="space-y-1">
-                  <label className={labelStyles}>Email Address</label>
-                  <Input
-                    {...field}
-                    type="email"
-                    placeholder="john@example.com"
-                    className={`${inputStyles} ${fieldState.invalid ? "ring-1 ring-red-500" : ""}`}
-                  />
-                  {fieldState.error && (
-                    <p className="text-[10px] text-red-500">
-                      {fieldState.error.message}
-                    </p>
-                  )}
-                </div>
-              )}
-            />
-          </div>
+              <Controller
+                name="email"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel>Email Address</FieldLabel>
+                    <Input
+                      {...field}
+                      type="email"
+                      placeholder="john@example.com"
+                      className={cn(
+                        baseInputStyles,
+                        fieldState.invalid && "ring-1 ring-red-500"
+                      )}
+                      aria-invalid={fieldState.invalid}
+                    />
+                    <FieldDescription>
+                      We&apos;ll only use this to respond to your enquiry.
+                    </FieldDescription>
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
+            </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-            {/* Location Field */}
-            <Controller
-              name="location"
-              control={control}
-              render={({ field, fieldState }) => (
-                <div className="space-y-1">
-                  <label className={labelStyles}>Project Location</label>
-                  <Input
-                    {...field}
-                    placeholder="City, Country"
-                    className={`${inputStyles} ${fieldState.invalid ? "ring-1 ring-red-500" : ""}`}
-                  />
-                  {fieldState.error && (
-                    <p className="text-[10px] text-red-500">
-                      {fieldState.error.message}
-                    </p>
-                  )}
-                </div>
-              )}
-            />
+            {/* Location + Project Type */}
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+              <Controller
+                name="location"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel>Project Location</FieldLabel>
+                    <Input
+                      {...field}
+                      placeholder="City, Country"
+                      className={cn(
+                        baseInputStyles,
+                        fieldState.invalid && "ring-1 ring-red-500"
+                      )}
+                      aria-invalid={fieldState.invalid}
+                    />
+                    <FieldDescription>
+                      Where is the project located?
+                    </FieldDescription>
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
 
-            {/* Project Type Field */}
+              <Controller
+                name="projectType"
+                control={form.control}
+                render={({ field, fieldState }) => (
+                  <Field data-invalid={fieldState.invalid}>
+                    <FieldLabel>Project Type</FieldLabel>
+                    <Select onValueChange={field.onChange} value={field.value}>
+                      <SelectTrigger
+                        className={cn(
+                          baseInputStyles,
+                          "w-full",
+                          fieldState.invalid && "ring-1 ring-red-500"
+                        )}
+                      >
+                        <SelectValue placeholder="Select type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="Residential Design">
+                          Residential Design
+                        </SelectItem>
+                        <SelectItem value="Wellness Studio">
+                          Wellness Studio
+                        </SelectItem>
+                        <SelectItem value="Furniture Customization">
+                          Furniture Customization
+                        </SelectItem>
+                        <SelectItem value="Commercial Office">
+                          Commercial Office
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                    {fieldState.invalid && (
+                      <FieldError errors={[fieldState.error]} />
+                    )}
+                  </Field>
+                )}
+              />
+            </div>
+
+            {/* Budget */}
             <Controller
-              name="projectType"
-              control={control}
+              name="budget"
+              control={form.control}
               render={({ field, fieldState }) => (
-                <div className="space-y-1">
-                  <label className={labelStyles}>Project Type</label>
-                  <Select
-                    onValueChange={field.onChange}
-                    defaultValue={field.value}
-                  >
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel>Estimated Budget</FieldLabel>
+                  <Select onValueChange={field.onChange} value={field.value}>
                     <SelectTrigger
-                      className={`${inputStyles} w-full ${fieldState.invalid ? "ring-1 ring-red-500" : ""}`}
+                      className={cn(
+                        baseInputStyles,
+                        "w-full",
+                        fieldState.invalid && "ring-1 ring-red-500"
+                      )}
                     >
-                      <SelectValue placeholder="Select type" />
+                      <SelectValue placeholder="Select range" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Residential Design">
-                        Residential Design
-                      </SelectItem>
-                      <SelectItem value="Wellness Studio">
-                        Wellness Studio
-                      </SelectItem>
-                      <SelectItem value="Furniture Customization">
-                        Furniture Customization
-                      </SelectItem>
-                      <SelectItem value="Commercial Office">
-                        Commercial Office
-                      </SelectItem>
+                      <SelectItem value="$10k - $25k">$10k - $25k</SelectItem>
+                      <SelectItem value="$25k - $50k">$25k - $50k</SelectItem>
+                      <SelectItem value="$50k - $100k">$50k - $100k</SelectItem>
+                      <SelectItem value="$100k+">$100k+</SelectItem>
                     </SelectContent>
                   </Select>
-                  {fieldState.error && (
-                    <p className="text-[10px] text-red-500">
-                      {fieldState.error.message}
-                    </p>
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
                   )}
-                </div>
+                </Field>
               )}
             />
-          </div>
 
-          {/* Budget Field */}
-          <Controller
-            name="budget"
-            control={control}
-            render={({ field, fieldState }) => (
-              <div className="space-y-1">
-                <label className={labelStyles}>Estimated Budget</label>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <SelectTrigger
-                    className={`${inputStyles} w-full ${fieldState.invalid ? "ring-1 ring-red-500" : ""}`}
-                  >
-                    <SelectValue placeholder="Select range" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="$10k - $25k">$10k - $25k</SelectItem>
-                    <SelectItem value="$25k - $50k">$25k - $50k</SelectItem>
-                    <SelectItem value="$50k - $100k">$50k - $100k</SelectItem>
-                    <SelectItem value="$100k+">$100k+</SelectItem>
-                  </SelectContent>
-                </Select>
-                {fieldState.error && (
-                  <p className="text-[10px] text-red-500">
-                    {fieldState.error.message}
-                  </p>
-                )}
-              </div>
-            )}
-          />
+            {/* Message */}
+            <Controller
+              name="message"
+              control={form.control}
+              render={({ field, fieldState }) => (
+                <Field data-invalid={fieldState.invalid}>
+                  <FieldLabel>Message / Vision</FieldLabel>
 
-          {/* Message Field */}
-          <Controller
-            name="message"
-            control={control}
-            render={({ field, fieldState }) => (
-              <div className="space-y-1">
-                <label className={labelStyles}>Message / Vision</label>
-                <Textarea
-                  {...field}
-                  placeholder="Tell us about your space..."
-                  className={`${inputStyles} min-h-30 ${fieldState.invalid ? "ring-1 ring-red-500" : ""}`}
-                />
-                {fieldState.error && (
-                  <p className="text-[10px] text-red-500">
-                    {fieldState.error.message}
-                  </p>
-                )}
-              </div>
-            )}
-          />
+                  <InputGroup>
+                    <Textarea
+                      {...field}
+                      placeholder="Tell us about your space..."
+                      className={cn(
+                        baseInputStyles,
+                        "min-h-32 resize-none",
+                        fieldState.invalid && "ring-1 ring-red-500"
+                      )}
+                      aria-invalid={fieldState.invalid}
+                    />
 
-          <button
-            className="bg-primary hover:bg-opacity-90 shadow-primary/20 w-full py-4 text-xs font-bold tracking-widest text-white uppercase shadow-lg transition-all disabled:opacity-50"
+                    {/* <InputGroupAddon align="block-end">
+                      <InputGroupText className="tabular-nums">
+                        {field.value.length} characters
+                      </InputGroupText>
+                    </InputGroupAddon> */}
+                  </InputGroup>
+
+                  <FieldDescription>
+                    Include goals, timeline, inspiration, and any constraints.
+                  </FieldDescription>
+
+                  {fieldState.invalid && (
+                    <FieldError errors={[fieldState.error]} />
+                  )}
+                </Field>
+              )}
+            />
+          </FieldGroup>
+
+          <Button
             type="submit"
-            disabled={isSubmitting}
+            className="hover:bg-charcoal/80 w-full text-white"
+            disabled={form.formState.isSubmitting}
+            variant={"outline"}
           >
-            {isSubmitting ? "Sending..." : "Send Project Inquiry"}
-          </button>
+            {form.formState.isSubmitting
+              ? "Sending..."
+              : "Send Project Inquiry"}
+          </Button>
         </form>
       </div>
     </div>
