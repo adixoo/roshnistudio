@@ -1,5 +1,6 @@
 import { PiArrowUpRight } from "react-icons/pi";
 
+import { Badge } from "@/components/ui/badge";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -61,10 +62,12 @@ export default function Projects() {
 
   return (
     <div className="bg-sand-50">
-      <div className="pt-32 pb-24">
+      <div className="pt-40 pb-24">
         <section className="mb-20">
           <div className="mx-auto max-w-7xl px-4">
-            <h1 className="-ml-1 font-serif text-6xl leading-[0.9] font-light md:text-8xl">
+            <Badge> roshni studio portfolio</Badge>
+
+            <h1 className="mt-8 -ml-1 font-serif text-6xl leading-[0.9] font-light md:text-8xl">
               Selected <br /> Architecture
             </h1>
             <div className="mt-12 flex flex-col justify-between gap-8 md:flex-row md:items-end">

@@ -2,11 +2,11 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Hero() {
   return (
-    <section className="py-32 text-white">
+    <section className="py-32 pt-40 text-white">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-16 px-4 md:flex-row">
         <div className="w-full md:w-1/2">
           <Badge>Contact roshni studio</Badge>
-          <h1 className="text-charcoal mt-6 font-serif text-5xl leading-tight md:text-7xl">
+          <h1 className="text-charcoal mt-8 font-serif text-5xl leading-tight md:text-7xl">
             Let&apos;s shape what&apos;s next.
           </h1>
           {/* <p className="max-w-md text-lg leading-relaxed text-slate-400">
