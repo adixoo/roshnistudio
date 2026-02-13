@@ -2,7 +2,6 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Controller, useForm } from "react-hook-form";
-import * as z from "zod";
 
 import { cn } from "@/lib/utils";
 
@@ -25,18 +24,8 @@ import {
   SelectValue
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-
+import { formSchema, FormValues } from "@/types/submitForm.types";
 // Schema
-const formSchema = z.object({
-  name: z.string().min(2, "Name must be at least 2 characters."),
-  email: z.string().email("Please enter a valid email address."),
-  location: z.string().min(1, "Project location is required."),
-  projectType: z.string().min(1, "Please select a project type."),
-  budget: z.string().min(1, "Please select a budget range."),
-  message: z.string().min(10, "Please provide a bit more detail.")
-});
-
-type FormValues = z.infer<typeof formSchema>;
 
 export default function EnquiryForm() {
   const form = useForm<FormValues>({
@@ -83,6 +72,7 @@ export default function EnquiryForm() {
                         fieldState.invalid && "ring-1 ring-red-500"
                       )}
                       aria-invalid={fieldState.invalid}
+                      required
                     />
                     <FieldDescription>
                       Your full name as you’d like us to address you.
@@ -109,6 +99,7 @@ export default function EnquiryForm() {
                         fieldState.invalid && "ring-1 ring-red-500"
                       )}
                       aria-invalid={fieldState.invalid}
+                      required
                     />
                     <FieldDescription>
                       We&apos;ll only use this to respond to your enquiry.
@@ -137,6 +128,7 @@ export default function EnquiryForm() {
                         fieldState.invalid && "ring-1 ring-red-500"
                       )}
                       aria-invalid={fieldState.invalid}
+                      required
                     />
                     <FieldDescription>
                       Where is the project located?
@@ -236,6 +228,7 @@ export default function EnquiryForm() {
                         fieldState.invalid && "ring-1 ring-red-500"
                       )}
                       aria-invalid={fieldState.invalid}
+                      required
                     />
 
                     {/* <InputGroupAddon align="block-end">
