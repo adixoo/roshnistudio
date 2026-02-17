@@ -15,7 +15,6 @@ import {
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { InputGroup } from "@/components/ui/input-group";
 import {
   Select,
   SelectContent,
@@ -218,25 +217,23 @@ export default function EnquiryForm() {
                 <Field data-invalid={fieldState.invalid}>
                   <FieldLabel>Message / Vision</FieldLabel>
 
-                  <InputGroup>
-                    <Textarea
-                      {...field}
-                      placeholder="Tell us about your space..."
-                      className={cn(
-                        baseInputStyles,
-                        "min-h-32 resize-none",
-                        fieldState.invalid && "ring-1 ring-red-500"
-                      )}
-                      aria-invalid={fieldState.invalid}
-                      required
-                    />
+                  <Textarea
+                    {...field}
+                    placeholder="Tell us about your space..."
+                    className={cn(
+                      baseInputStyles,
+                      "min-h-32 resize-none py-4",
+                      fieldState.invalid && "ring-1 ring-red-500"
+                    )}
+                    aria-invalid={fieldState.invalid}
+                    required
+                  />
 
-                    {/* <InputGroupAddon align="block-end">
+                  {/* <InputGroupAddon align="block-end">
                       <InputGroupText className="tabular-nums">
                         {field.value.length} characters
                       </InputGroupText>
                     </InputGroupAddon> */}
-                  </InputGroup>
 
                   <FieldDescription>
                     Include goals, timeline, inspiration, and any constraints.
