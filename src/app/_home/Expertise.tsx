@@ -30,7 +30,7 @@ export default function Expertise() {
     <section className="bg-sand-50 border-primary-foreground/5 border-y py-24">
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-20 text-center">
-          <h2 className="mb-4 font-serif text-4xl md:text-6xl">
+          <h2 className="mb-4 font-serif text-3xl md:text-5xl">
             Our Expertise
           </h2>
           <div className="bg-primary mx-auto h-px w-24" />
@@ -42,11 +42,11 @@ export default function Expertise() {
               key={item.id}
               className={`group p-10 transition-all duration-300 hover:bg-white ${item.bordered ? "border-charcoal/10 dark:border-sand/10 border-b md:border-r md:border-b-0" : ""} `}
             >
-              <span className="text-primary/40 group-hover:text-primary font-display font-serif text-6xl transition-colors">
+              <span className="text-primary/40 group-hover:text-primary font-display font-serif text-5xl transition-colors">
                 {item.id}
               </span>
 
-              <h3 className="mt-6 mb-4 font-serif text-3xl">{item.title}</h3>
+              <h3 className="mt-6 mb-4 font-serif text-2xl">{item.title}</h3>
 
               <p className="text-charcoal/80 dark:text-sand/60 mb-8 text-sm leading-relaxed">
                 {item.description}

@@ -54,7 +54,7 @@ export default function Pillars() {
                 <Badge variant="text" className="mb-4">
                   {pillar.id} / {pillar.category}
                 </Badge>
-                <h2 className="mb-8 font-serif text-4xl leading-[1.1] md:text-6xl">
+                <h2 className="mb-8 font-serif text-3xl leading-[1.1] md:text-5xl">
                   {pillar.title}
                 </h2>
                 <p className="text-primary-foreground/80 mb-6 leading-relaxed">

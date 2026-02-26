@@ -18,7 +18,7 @@ export default function Hero() {
           <Badge>Residential &amp; Wellness Studio</Badge>
           {/* <span className="bg-primary-foreground text-primary px-3 py-2 text-xs font-bold tracking-[0.4em] uppercase"></span> */}
 
-          <h1 className="mt-8 mb-12 font-serif text-6xl leading-[1.1] font-light text-white md:text-8xl">
+          <h1 className="mt-8 mb-12 font-serif text-5xl leading-[1.1] font-light text-white md:text-7xl">
             Architecture Design guided by{" "}
             <span className="font-medium italic">Human Biology</span>, not
             trends.

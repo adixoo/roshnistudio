@@ -34,7 +34,7 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <h2 className="mb-4 font-serif text-6xl">Selected Works</h2>
+            <h2 className="mb-4 font-serif text-5xl">Selected Works</h2>
             <p className="text-primary-foreground/80 max-w-md">
               A curation of projects defined by their relationship to light,
               site, and serenity.
@@ -66,7 +66,7 @@ export default function Projects() {
               </div>
 
               <div className="flex items-center justify-between">
-                <h3 className="text-xl md:text-2xl">{project.title}</h3>
+                <h3 className="text-lg md:text-xl">{project.title}</h3>
                 <span className="text-xs font-bold tracking-widest uppercase opacity-60">
                   {project.location}
                 </span>

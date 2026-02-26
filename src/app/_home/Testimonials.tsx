@@ -33,7 +33,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl px-8">
         {/* Header Section */}
         <div className="mb-20 text-center">
-          <h2 className="mb-4 font-serif text-4xl md:text-6xl">
+          <h2 className="mb-4 font-serif text-3xl md:text-5xl">
             What Our Clients Say
           </h2>
           <div className="bg-primary mx-auto h-px w-24" />
@@ -56,7 +56,7 @@ export default function Testimonials() {
                 aria-hidden="true"
               />
 
-              <blockquote className="text-charcoal/90 mb-8 font-serif text-3xl leading-snug md:text-4xl">
+              <blockquote className="text-charcoal/90 mb-8 font-serif text-2xl leading-snug md:text-3xl">
                 &quot;{item.quote}&quot;
               </blockquote>
 
