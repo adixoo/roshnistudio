@@ -1,6 +1,11 @@
 "use client";
 
-import { AnimatePresence } from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll
+} from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -17,18 +22,52 @@ const NAV_LINKS = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+
+    // Background change threshold
+    if (latest > 50) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+
+    // Show/Hide logic
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
 
   return (
-    <header className="bg-primary-foreground/90 fixed top-0 z-50 w-full border-b border-white/5 backdrop-blur-sm">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 text-white md:h-20">
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" }
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+      className={`fixed top-0 z-50 w-full border-b transition-all duration-500 ${
+        isScrolled
+          ? "bg-primary-foreground/90 border-white/5 text-white backdrop-blur-sm"
+          : "text-charcoal border-transparent bg-transparent"
+      }`}
+    >
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 transition-colors duration-500 md:h-20">
         <Link
-          className="bg-sand-50 flex size-10 items-center justify-center rounded font-serif text-lg tracking-[0.3em] uppercase sm:text-xl"
+          className="bg-sand-50/10 flex size-10 items-center justify-center rounded font-serif text-lg tracking-[0.3em] uppercase sm:text-xl"
           href="/"
         >
           <Image
             src={logo}
             alt="Roshni Design Studio Logo"
-            className="h-[60%] w-auto"
+            className="h-[60%]"
           />
         </Link>
 
@@ -65,6 +104,6 @@ export default function Header() {
           </AnimatePresence>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }
