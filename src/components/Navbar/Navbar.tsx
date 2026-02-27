@@ -20,6 +20,24 @@ const NAV_LINKS = [
   { label: "Services", href: "/services" }
 ];
 
+const containerVariants = {
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -10 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" }
+  }
+} as const;
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -51,6 +69,7 @@ export default function Header() {
         visible: { y: 0 },
         hidden: { y: "-100%" }
       }}
+      initial="visible"
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className={`fixed top-0 z-50 w-full border-b transition-all duration-500 ${
@@ -60,49 +79,55 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 transition-colors duration-500 md:h-20">
-        <Link
-          className="bg-sand-50/10 flex size-10 items-center justify-center rounded font-serif text-lg tracking-[0.3em] uppercase sm:text-xl"
-          href="/"
-        >
+        <Link href="/" className="flex items-center">
           <Image
             src={logo}
             alt="Roshni Design Studio Logo"
-            className="h-[60%]"
+            className="h-10 w-auto object-contain"
           />
         </Link>
 
-        <div className="flex items-center gap-12">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex items-center gap-12"
+        >
           <nav className="hidden space-x-6 text-xs font-medium tracking-[0.2em] uppercase md:flex">
             {NAV_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="nav-link relative"
-                prefetch={false}
-              >
-                {link.label}
-              </Link>
+              <motion.div key={link.label} variants={itemVariants}>
+                <Link
+                  href={link.href}
+                  className="nav-link relative"
+                  prefetch={false}
+                >
+                  {link.label}
+                </Link>
+              </motion.div>
             ))}
           </nav>
 
-          <Link href="/contact" className="max-sm:hidden">
-            <Button variant={"outline"}>Let&apos;s Connect</Button>
-          </Link>
+          <motion.div variants={itemVariants} className="max-sm:hidden">
+            <Link href="/contact">
+              <Button variant={"outline"}>Let&apos;s Connect</Button>
+            </Link>
+          </motion.div>
 
-          <button
+          <motion.button
+            variants={itemVariants}
             onClick={() => setIsOpen(true)}
             className="text-sm font-medium tracking-widest uppercase md:hidden"
           >
             <MenuIcon className="size-8" />
             <span className="sr-only">navigation menu button</span>
-          </button>
+          </motion.button>
 
           <AnimatePresence>
             {isOpen && (
               <MobileNavbar isOpen={isOpen} onClose={() => setIsOpen(false)} />
             )}
           </AnimatePresence>
-        </div>
+        </motion.div>
       </div>
     </motion.header>
   );
