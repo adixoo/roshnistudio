@@ -19,7 +19,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-primary-foreground/90 fixed top-0 z-50 w-full border-b border-white/5 backdrop-blur-sm">
+    <header className="bg-primary-foreground/90 fixed top-0 z-50 hidden w-full border-b border-white/5 backdrop-blur-sm">
       <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-4 text-white md:h-20">
         <Link
           className="bg-sand-50 flex size-10 items-center justify-center rounded font-serif text-lg tracking-[0.3em] uppercase sm:text-xl"
