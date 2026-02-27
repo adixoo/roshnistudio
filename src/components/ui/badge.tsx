@@ -11,7 +11,7 @@ const badgeVariants = cva(
       variant: {
         // FILLED (default)
         default:
-          "bg-primary-foreground text-primary px-4 py-2  tracking-[0.3em]",
+          " px-4 py-2  tracking-[0.3em] border border-charcoal/20 text-charcoal text-[0.65rem] font-bold",
 
         // TEXT ONLY
         text: "text-primary tracking-[0.2em] text-sm",
@@ -44,7 +44,7 @@ function Badge({
     <Comp
       data-slot="badge"
       data-variant={variant}
-      className={cn(badgeVariants({ variant }), className, "text-[0.6rem]")}
+      className={cn(badgeVariants({ variant }), className)}
       {...props}
     />
   );
