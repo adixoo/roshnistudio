@@ -23,7 +23,11 @@ export default function Hero() {
       </div>
 
       <div className="py-24">
-        <LoadingCarousel backgroundTips={false} animateText={false} />
+        <LoadingCarousel
+          backgroundTips={false}
+          animateText={false}
+          showNavigation
+        />
       </div>
     </section>
   );

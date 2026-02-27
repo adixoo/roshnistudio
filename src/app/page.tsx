@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("./_home/Hero"));
-const Expertise = dynamic(() => import("./_home/Expertise"));
+// const Expertise = dynamic(() => import("./_home/Expertise"));
 const Philosophy = dynamic(() => import("./_home/Philosphy"));
 const Pillars = dynamic(() => import("./_home/Pillars"));
 const Projects = dynamic(() => import("./_home/Projects"));
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <Philosophy />
       <Pillars />
-      <Expertise />
+      {/* <Expertise /> */}
       <Projects />
 
       <Testimonials />
