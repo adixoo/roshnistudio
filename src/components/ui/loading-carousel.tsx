@@ -15,11 +15,10 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
+import { ChevronRight } from "lucide-react";
 
 interface Tip {
   text: string;
@@ -204,10 +203,7 @@ export function LoadingCarousel({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={cn(
-        "bg-muted mx-auto w-full max-w-6xl shadow-[0px_1px_1px_0px_rgba(0,0,0,0.05),0px_1px_1px_0px_rgba(255,252,240,0.5)_inset,0px_0px_0px_1px_hsla(0,0%,100%,0.1)_inset,0px_0px_1px_0px_rgba(28,27,26,0.5)]",
-        className
-      )}
+      className={cn("mx-auto w-full max-w-7xl px-4", className)}
     >
       <div className="w-full overflow-hidden">
         <Carousel
@@ -273,19 +269,14 @@ export function LoadingCarousel({
               ))}
             </AnimatePresence>
           </CarouselContent>
-          {showNavigation && (
+          {/* {showNavigation && (
             <>
               <CarouselPrevious className="absolute top-1/2 left-2 -translate-y-1/2" />
               <CarouselNext className="absolute top-1/2 right-2 -translate-y-1/2" />
             </>
-          )}
+          )} */}
         </Carousel>
-        {/* <div
-          className={cn(
-            "bg-muted p-4",
-            showIndicators && !backgroundTips ? "lg:px-4 lg:py-2" : ""
-          )}
-        >
+        <div>
           <div
             className={cn(
               "flex flex-col items-center justify-between space-y-2 sm:flex-row sm:space-y-0",
@@ -295,18 +286,20 @@ export function LoadingCarousel({
             )}
           >
             {showIndicators && (
-              <div className="flex w-full space-x-2 overflow-x-auto pb-2 sm:w-auto sm:pb-0">
+              <div className="mx-auto flex w-max space-x-2 overflow-x-auto pt-2 pb-2 sm:w-auto sm:pb-0">
                 {(displayTips || []).map((_, index) => (
-                  <motion.button
+                  <button
                     key={index}
-                    className={`h-1 w-8 flex-shrink-0 rounded-full ${
-                      index === current ? "bg-muted" : "bg-primary"
+                    className={`h-1 w-8 flex-shrink-0 cursor-pointer transition-colors ${
+                      index === current ? "bg-charcoal" : "bg-charcoal/20"
                     }`}
-                    initial={false}
-                    animate={{
-                      backgroundColor: index === current ? "#3D3D3E" : "#E6E6E4"
-                    }}
-                    transition={{ duration: 0.5 }}
+                    // animate={{
+                    //   backgroundColor:
+                    //     index === current
+                    //       ? "var(--color-charcoal)"
+                    //       : "var(--color-primary)"
+                    // }}
+                    // transition={{ duration: 0.5 }}
                     onClick={() => handleSelect(index)}
                     aria-label={`Go to tip ${index + 1}`}
                   />
@@ -314,7 +307,7 @@ export function LoadingCarousel({
               </div>
             )}
             <div className="text-primary flex items-center space-x-2 whitespace-nowrap">
-              {backgroundTips ? (
+              {/* {backgroundTips ? (
                 <span className="text-sm font-medium">
                   Tip {current + 1}/{displayTips?.length || 0}
                 </span>
@@ -355,19 +348,19 @@ export function LoadingCarousel({
                     </span>
                   )}
                 </div>
-              )}
+              )} */}
               {backgroundTips && <ChevronRight className="h-4 w-4" />}
             </div>
           </div>
-          {showProgress && (
+          {/* {showProgress && (
             <motion.div
               initial={{ scaleX: 0 }}
               animate={controls}
               transition={{ duration: 0.5, ease: "linear" }}
-              className="bg-muted mt-2 h-1 origin-left"
+              className="bg-charcoal h-1 origin-left"
             />
-          )}
-        </div> */}
+          )} */}
+        </div>
       </div>
     </motion.div>
   );
