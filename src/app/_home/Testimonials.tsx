@@ -52,7 +52,7 @@ export default function Testimonials() {
             >
               {/* Phosphor Filled Icon */}
               <PiQuotesFill
-                className="text-gold mb-6 text-4xl opacity-40"
+                className="text-primary mb-6 text-4xl opacity-60"
                 aria-hidden="true"
               />
 

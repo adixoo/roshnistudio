@@ -11,7 +11,7 @@ const badgeVariants = cva(
       variant: {
         // FILLED (default)
         default:
-          " px-4 py-2  tracking-[0.3em] border border-charcoal/20 text-charcoal text-[0.65rem] font-bold",
+          " px-4 py-2  tracking-[0.3em] border border-charcoal/20 text-charcoal text-[0.65rem] font-bold bg-sand-50",
 
         // TEXT ONLY
         text: "text-primary tracking-[0.2em] text-sm",

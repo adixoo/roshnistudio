@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="bg-sand-50">
       <div className="flex items-center justify-center px-4 py-10 pt-40 text-center">
-        <div className="max-w-4xl">
+        <div className="relative z-10 max-w-4xl">
           <Badge>Residential & Wellness Studio</Badge>
 
           <h1 className="mt-8 mb-12 font-serif text-5xl leading-[1.1] font-light md:text-7xl">
@@ -20,6 +20,25 @@ export default function Hero() {
             <Button>Book A Consultation</Button>
           </ConsultationOverlay>
         </div>
+
+        {/* <div
+          className="absolute inset-0 z-0"
+          style={{
+            opacity: 0.5,
+            background: "var(--color-sand-50)",
+            backgroundImage: `
+        radial-gradient(
+          circle at top center,
+          var(--color-primary),
+          transparent 70%
+        )
+      `,
+            filter: "blur(80px)",
+            backgroundRepeat: "no-repeat"
+          }}
+        /> */}
+
+        <GridBg />
       </div>
 
       <div className="py-24">
@@ -30,5 +49,57 @@ export default function Hero() {
         />
       </div>
     </section>
+  );
+}
+
+function GridBg() {
+  return (
+    <div
+      className="absolute inset-0 z-0 opacity-60"
+      style={{
+        backgroundImage: `
+        linear-gradient(to right, var(--color-primary) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--color-primary) 1px, transparent 1px)
+      `,
+        backgroundSize: "20px 20px",
+        backgroundPosition: "0 0, 0 0",
+        maskImage: `
+        repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+      `,
+        WebkitMaskImage: `
+ repeating-linear-gradient(
+              to right,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              black 0px,
+              black 3px,
+              transparent 3px,
+              transparent 8px
+            ),
+            radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%)
+      `,
+        maskComposite: "intersect",
+        WebkitMaskComposite: "source-in"
+      }}
+    />
   );
 }
