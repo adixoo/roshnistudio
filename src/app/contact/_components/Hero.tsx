@@ -20,7 +20,7 @@ export default function Hero() {
         </div>
 
         {/* Right Side: Calendly Widget */}
-        <div className="min-h-[600px] overflow-hidden border border-slate-100 bg-slate-50">
+        <div className="min-h-[600px] overflow-hidden bg-white">
           <div
             className="calendly-inline-widget"
             data-url="https://calendly.com/muskianand89/30min?text_color=181b1f&primary_color=ebcb90"

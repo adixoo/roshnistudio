@@ -91,7 +91,7 @@ export default function EnquiryForm() {
   return (
     <div className="lg:col-span-2">
       <div className="bg-white p-8 shadow">
-        <h3 className="border-charcoal/20 mb-6 border-b pb-4 font-serif text-2xl text-slate-900">
+        <h3 className="border-charcoal/20 text-charcoal mb-6 border-b pb-4 font-serif text-2xl">
           Project Enquiry
         </h3>
 
