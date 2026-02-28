@@ -286,11 +286,11 @@ export function LoadingCarousel({
             )}
           >
             {showIndicators && (
-              <div className="mx-auto flex w-max space-x-2 overflow-x-auto pt-2 pb-2 sm:w-auto sm:pb-0">
+              <div className="mx-auto flex w-max space-x-2 overflow-x-auto pt-4 pb-2 sm:w-auto sm:pb-0">
                 {(displayTips || []).map((_, index) => (
                   <button
                     key={index}
-                    className={`h-1 w-8 flex-shrink-0 cursor-pointer transition-colors ${
+                    className={`h-0.5 w-8 shrink-0 cursor-pointer transition-colors md:h-1 ${
                       index === current ? "bg-charcoal" : "bg-charcoal/20"
                     }`}
                     // animate={{

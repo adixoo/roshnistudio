@@ -300,7 +300,7 @@ export default function EnquiryForm() {
 
           <Button
             type="submit"
-            className="hover:bg-charcoal/80 w-full text-white"
+            className="w-full"
             disabled={form.formState.isSubmitting}
             variant={"outline"}
           >

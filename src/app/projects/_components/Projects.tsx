@@ -40,7 +40,7 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.title}
-            className="group relative aspect-[1.1/1] overflow-hidden"
+            className="group relative overflow-hidden md:aspect-square"
           >
             <Link
               href={`/projects/${project.url}`}
@@ -49,15 +49,15 @@ export default function Projects() {
             />
             <img
               alt={project.title}
-              className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
               src={project.image}
             />
 
-            <ProgressiveBlur height="40%" />
+            <ProgressiveBlur height="50%" />
             <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 text-white md:p-8">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-2xl font-light tracking-widest uppercase md:text-2xl">
+                  <h3 className="text-xl font-light tracking-widest uppercase md:text-2xl">
                     {project.title}
                   </h3>
                   <p className="mt-1 text-sm opacity-90">{project.location}</p>

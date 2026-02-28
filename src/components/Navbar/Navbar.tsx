@@ -77,7 +77,7 @@ export default function Header() {
           <Image
             src={logo}
             alt="Roshni Design Studio Logo"
-            className="h-10 w-auto object-contain"
+            className="h-8 w-auto object-contain lg:h-10"
           />
         </Link>
 

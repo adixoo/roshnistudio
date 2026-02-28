@@ -4,6 +4,7 @@
 import { StudioInfo } from "@/constant/info";
 import { motion, Variants } from "motion/react";
 import Link from "next/link";
+import { PiArrowUpRight } from "react-icons/pi";
 
 interface MenuOverlayProps {
   isOpen: boolean;
@@ -133,29 +134,32 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
         className="mt-20 flex gap-6 text-sm font-light"
       >
         <a
-          className="nav-link relative"
+          className="nav-link relative inline-flex items-center gap-1"
           href={StudioInfo.Instagram}
           target="_blank"
           rel="noopener noreferrer"
         >
           Instagram
+          <PiArrowUpRight />
         </a>
 
         <a
-          className="nav-link relative"
+          className="nav-link relative inline-flex items-center gap-1"
           href={StudioInfo.Pinterest}
           target="_blank"
           rel="noopener noreferrer"
         >
           Pinterest
+          <PiArrowUpRight />
         </a>
         <a
-          className="nav-link relative"
-          href={StudioInfo.Pinterest}
+          className="nav-link relative inline-flex items-center gap-1"
+          href={StudioInfo.Facebook}
           target="_blank"
           rel="noopener noreferrer"
         >
           Facebook
+          <PiArrowUpRight />
         </a>
       </motion.div>
     </motion.div>

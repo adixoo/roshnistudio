@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("./_components/Hero"));
 const Services = dynamic(() => import("./_components/Services"));
-const CTA = dynamic(() => import("./_components/CTA"));
+// const CTA = dynamic(() => import("./_components/CTA"));
 
 import type { Metadata } from "next";
 
@@ -40,7 +40,7 @@ export default function ServicesPage() {
     <div className="bg-sand-50">
       <Hero />
       <Services />
-      <CTA />
+      {/* <CTA /> */}
     </div>
   );
 }

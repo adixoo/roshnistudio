@@ -1,5 +1,6 @@
 import { StudioInfo } from "@/constant/info";
 import Image from "next/image";
+import { PiArrowUpRight } from "react-icons/pi";
 
 const Footer = () => (
   <footer className="bg-sand-50 px-6 pt-24 pb-12">
@@ -13,6 +14,7 @@ const Footer = () => (
             height={40}
             className="mb-8 h-12 w-auto object-contain md:h-16"
           />
+
           {/* <p className="max-w-xs leading-relaxed opacity-60">
             A design practice dedicated to human-centric architecture and the
             pursuit of quiet beauty.
@@ -55,32 +57,38 @@ const Footer = () => (
           </h3>
           <div className="flex space-x-6 text-sm opacity-80">
             <a
-              className="nav-link relative"
+              className="nav-link relative inline-flex items-center gap-1"
               href={StudioInfo.Instagram}
               target="_blank"
               rel="noopener noreferrer"
             >
               Instagram
+              <PiArrowUpRight />
             </a>
 
             <a
-              className="nav-link relative"
+              className="nav-link relative inline-flex items-center gap-1"
               href={StudioInfo.Pinterest}
               target="_blank"
               rel="noopener noreferrer"
             >
               Pinterest
+              <PiArrowUpRight />
             </a>
             <a
-              className="nav-link relative"
-              href={StudioInfo.Pinterest}
+              className="nav-link relative inline-flex items-center gap-1"
+              href={StudioInfo.Facebook}
               target="_blank"
               rel="noopener noreferrer"
             >
               Facebook
+              <PiArrowUpRight />
             </a>
           </div>
         </div>
+      </div>
+      <div className="from-primary to-primary/10 bg-linear-to-t bg-clip-text text-center font-serif text-4xl text-transparent uppercase opacity-50 md:text-5xl lg:text-9xl">
+        Roshni Studio
       </div>
 
       <div className="border-primary/5 flex flex-col items-center justify-between space-y-4 border-t pt-12 text-[10px] tracking-widest uppercase opacity-40 md:flex-row md:space-y-0">
