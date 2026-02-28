@@ -13,6 +13,7 @@ import {
   FieldLabel
 } from "@/components/ui/field";
 
+import { submitForm } from "@/app/(actions)/submitForm";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -23,24 +24,65 @@ import {
   SelectValue
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { formSchema, FormValues } from "@/types/submitForm.types";
+import {
+  BUDGET_MAP,
+  formSchema,
+  FormValues,
+  PROJECT_TYPE_MAP
+} from "@/types/submitForm.types";
+import { useState } from "react";
 // Schema
 
 export default function EnquiryForm() {
+  const [submissionStatus, setSubmissionStatus] = useState<{
+    success?: boolean;
+    message?: string;
+  } | null>(null);
+
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
       email: "",
       location: "",
-      projectType: "",
+      projectType: "" as any,
       budget: "",
       message: ""
     }
   });
 
-  function onSubmit(data: FormValues) {
-    console.log("Form Submitted:", data);
+  async function onSubmit(data: FormValues) {
+    setSubmissionStatus(null);
+    try {
+      const result = await submitForm(data);
+      console.log(result);
+      if (result.success) {
+        setSubmissionStatus({
+          success: true,
+          message: result.message
+        });
+        form.reset();
+      } else {
+        setSubmissionStatus({
+          success: false,
+          message: "Please correct the errors in the form."
+        });
+        // You could also map errors back to the form if needed
+        if (result.errors) {
+          Object.entries(result.errors).forEach(([key, messages]) => {
+            form.setError(key as keyof FormValues, {
+              type: "manual",
+              message: messages?.[0]
+            });
+          });
+        }
+      }
+    } catch (error) {
+      setSubmissionStatus({
+        success: false,
+        message: "Something went wrong. Please try again later."
+      });
+    }
   }
 
   const baseInputStyles =
@@ -52,6 +94,19 @@ export default function EnquiryForm() {
         <h3 className="border-charcoal/20 mb-6 border-b pb-4 font-serif text-2xl text-slate-900">
           Project Enquiry
         </h3>
+
+        {submissionStatus && (
+          <div
+            className={cn(
+              "mb-6 p-4 text-sm font-medium",
+              submissionStatus.success
+                ? "bg-green-100 text-green-800"
+                : "bg-red-100 text-red-800"
+            )}
+          >
+            {submissionStatus.message}
+          </div>
+        )}
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FieldGroup>
@@ -156,18 +211,13 @@ export default function EnquiryForm() {
                         <SelectValue placeholder="Select type" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="Residential Design">
-                          Residential Design
-                        </SelectItem>
-                        <SelectItem value="Wellness Studio">
-                          Wellness Studio
-                        </SelectItem>
-                        <SelectItem value="Furniture Customization">
-                          Furniture Customization
-                        </SelectItem>
-                        <SelectItem value="Commercial Office">
-                          Commercial Office
-                        </SelectItem>
+                        {Object.entries(PROJECT_TYPE_MAP).map(
+                          ([key, label]) => (
+                            <SelectItem key={key} value={key}>
+                              {label}
+                            </SelectItem>
+                          )
+                        )}
                       </SelectContent>
                     </Select>
                     {fieldState.invalid && (
@@ -196,10 +246,11 @@ export default function EnquiryForm() {
                       <SelectValue placeholder="Select range" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="$10k - $25k">$10k - $25k</SelectItem>
-                      <SelectItem value="$25k - $50k">$25k - $50k</SelectItem>
-                      <SelectItem value="$50k - $100k">$50k - $100k</SelectItem>
-                      <SelectItem value="$100k+">$100k+</SelectItem>
+                      {Object.entries(BUDGET_MAP).map(([key, label]) => (
+                        <SelectItem key={key} value={key}>
+                          {label}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                   {fieldState.invalid && (
