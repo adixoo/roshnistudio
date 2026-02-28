@@ -11,7 +11,7 @@ export default function CTA() {
               Ready to evolve <br />
               your space?
             </h2>
-            <p className="max-w-md text-lg leading-relaxed font-light text-white/80">
+            <p className="max-w-md text-base leading-relaxed font-light text-white/80">
               Begin the conversation about your next architectural project. We
               work globally with clients who value intention and atmosphere.
             </p>

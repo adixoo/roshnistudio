@@ -13,8 +13,7 @@ export default function Philosophy() {
           <div className="order-1 md:order-2">
             {/* <Badge variant={"text"}>Our Belief</Badge> */}
             <h2 className="mt-6 mb-8 font-serif text-4xl leading-[1.1] md:text-5xl">
-              A vessel for <br />
-              mindfulness.
+              A vessel for mindfulness.
             </h2>
             <p className="text-charcoal/80 mb-8 text-base leading-relaxed font-light">
               We believe a home is more than a structure; it is an instrument

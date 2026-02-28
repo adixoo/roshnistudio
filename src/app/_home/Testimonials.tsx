@@ -56,15 +56,15 @@ export default function Testimonials() {
                 aria-hidden="true"
               />
 
-              <blockquote className="text-charcoal/90 mb-8 font-serif text-xl leading-snug font-light md:text-2xl">
+              <blockquote className="text-charcoal/90 mb-8 font-serif text-2xl leading-snug font-light">
                 &quot;{item.quote}&quot;
               </blockquote>
 
               <div className="border-primary mt-auto border-l-2 pl-6">
-                <p className="text-charcoal text-sm font-medium tracking-widest uppercase">
+                <p className="text-charcoal text-xs md:text-sm">
                   {item.client}
                 </p>
-                <p className="text-charcoal/60 text-xs font-light tracking-widest uppercase">
+                <p className="text-charcoal/60 text-xs md:text-sm">
                   {item.location}
                 </p>
               </div>
