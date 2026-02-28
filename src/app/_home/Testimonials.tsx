@@ -56,7 +56,7 @@ export default function Testimonials() {
                 aria-hidden="true"
               />
 
-              <blockquote className="text-charcoal/90 mb-8 font-serif text-2xl leading-snug md:text-3xl">
+              <blockquote className="text-charcoal/90 mb-8 font-serif text-xl leading-snug md:text-2xl">
                 &quot;{item.quote}&quot;
               </blockquote>
 

@@ -1,9 +1,9 @@
 import dynamic from "next/dynamic";
 
 const Hero = dynamic(() => import("./_components/Hero"));
-const Approach = dynamic(() => import("./_components/Approach"));
+// const Approach = dynamic(() => import("./_components/Approach"));
 const Quote = dynamic(() => import("./_components/Quote"));
-const CTA = dynamic(() => import("./_components/CTA"));
+// const CTA = dynamic(() => import("./_components/CTA"));
 
 import type { Metadata } from "next";
 
@@ -43,8 +43,8 @@ export default function Profile() {
     <div className="bg-sand-50">
       <Hero />
       <Quote />
-      <Approach />
-      <CTA />
+      {/* <Approach /> */}
+      {/* <CTA /> */}
 
       {/* <button
         className="bg-primary dark:bg-accent-cream dark:text-primary fixed right-8 bottom-8 z-[60] flex h-12 w-12 items-center justify-center rounded-full text-white shadow-2xl transition-transform hover:scale-110"

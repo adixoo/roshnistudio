@@ -1,13 +1,18 @@
 import { StudioInfo } from "@/constant/info";
+import Image from "next/image";
 
 const Footer = () => (
   <footer className="bg-sand-50 px-6 pt-24 pb-12">
     <div className="mx-auto max-w-7xl">
       <div className="mb-20 grid grid-cols-1 gap-12 md:grid-cols-4">
         <div className="md:col-span-2">
-          <h2 className="font-display mb-8 text-2xl tracking-widest uppercase">
-            ROSHNI STUDIO
-          </h2>
+          <Image
+            src="/logo.png"
+            alt="Roshni Studio Logo"
+            width={180}
+            height={40}
+            className="mb-8 h-12 w-auto object-contain md:h-16"
+          />
           {/* <p className="max-w-xs leading-relaxed opacity-60">
             A design practice dedicated to human-centric architecture and the
             pursuit of quiet beauty.
