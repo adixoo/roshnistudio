@@ -1,6 +1,11 @@
 "use server";
 
-import { formSchema, FormValues } from "@/types/submitForm.types";
+import {
+  BUDGET_MAP,
+  formSchema,
+  FormValues,
+  PROJECT_TYPE_MAP
+} from "@/types/submitForm.types";
 
 export async function submitForm(data: FormValues) {
   const result = formSchema.safeParse(data);
@@ -13,7 +18,16 @@ export async function submitForm(data: FormValues) {
   }
 
   // Here you would typically send an email or save to a database
-  console.log("Form Submitted Successfully:", result.data);
+  const formattedData = {
+    ...result.data,
+    projectType:
+      PROJECT_TYPE_MAP[
+        result.data.projectType as keyof typeof PROJECT_TYPE_MAP
+      ],
+    budget: BUDGET_MAP[result.data.budget as keyof typeof BUDGET_MAP]
+  };
+
+  console.log("Form Submitted Successfully:", formattedData);
 
   return {
     success: true,
