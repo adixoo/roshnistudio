@@ -74,7 +74,7 @@ export default function Header() {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className={`fixed top-0 z-50 w-full border-b transition-all duration-500 ${
         isScrolled
-          ? "bg-primary-foreground/90 border-white/5 text-white backdrop-blur-sm"
+          ? "bg-white"
           : "text-charcoal border-transparent bg-transparent"
       }`}
     >
