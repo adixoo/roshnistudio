@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import type { Metadata } from "next";
+import CTA from "./_components/CTA";
 import Projects from "./_components/Projects";
 
 export const metadata: Metadata = {
@@ -46,6 +47,8 @@ export default function ProjectsPage() {
         </section>
 
         <Projects />
+
+        <CTA />
       </div>
     </div>
   );

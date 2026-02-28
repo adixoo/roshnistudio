@@ -1,27 +1,33 @@
-import { PiArrowUpRight } from "react-icons/pi";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+import Link from "next/link";
+import { PiArrowRight } from "react-icons/pi";
 
 const projects = [
   {
     title: "Snowstone Residence",
     location: "Teton County, Wyoming",
+    url: "snowstone-residence",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBocU3uEUTVzlu9zceiw_h1kiQc5WT-ymYUaDwfPqE66R18iIUWQZfL7Mpk61o4VjGJ8DgTD5DHV0QQ5EjQcawnArcUU-33GKUQCjxueZ3NZ38wrSOmHxwBaI-mTBxjSr6rTNdHI23gtDSqvXd2uMFfaUMJoYHOEEYciEP_ZGG2SB-08vR3s8RK0prpQ50Ktt2dlZ-QSaN8C4xjTgl9guyFelYVyG7bjz00xwK96robtm2BuoacgXKkkA1hy-vSAieTscAcgphvpA"
   },
   {
     title: "Shooting Star Sanctuary",
     location: "Teton Village, Wyoming",
+    url: "shooting-star-sanctuary",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuBNZbUPL7ApunBwWULen7z8JrZaoBUbDVETF6eSd41cL-RHg0jOCoAnIvS6PGzB9b63MBpIDvzDxfoysUhbEQjP5tJxuzGf3wouezAYh2WjjZCooJqLjJgxEUnrydNGmuAmzByXCmSjJMARBTjDerRZR8aPsNt44HQLU67z4xxUaCsKGIH-rK00UloBw60o8uuqoVgVwuVUtelLBcnZxuhy66hmAoIAFTC9R-_WTCnnT6sQQq8YU42LyqX3vweOIBS8PGKG0oF2PA"
   },
   {
     title: "Aegean Retreat",
     location: "Cyclades, Greece",
+    url: "aegean-retreat",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuD5FYE0plTuNPzR1rBnkIocgZ-x6aHgAAx_o9IBE5HsewXn7CshixCZuhNDpNUBASyf1SNxRUQu8Pby0ieV5vSVvR--f3_NHbEoZMonDNcm3Tl7EJAsC_zkCMoBZUQEkzlMBK-COXrq6sV1kHt4BZScV1b7jSgx9M5eCEI9L6A6bcR69cq-7C2z6j5vs79dpdmmcWyHgFHBVoPJcJ25hd_q85MT7xijuX6VkKELyKUrKukqMYFom7ELu4Dzf-L81vgrCyzbkm7zlw"
   },
   {
     title: "Cotswold House",
     location: "Gloucestershire, UK",
+    url: "cotswold-house",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuDsDcT_WjoiBVliZ5-eOPBjm36fBwRZrnyaxSnoYpUkb_Ycvc33jg8Ypinm0Z7ZbuLlH63Vu5eosbB0veJp1etroFq6bMkS_mGFdZvf8cOGqIfHVzRiOcXZBuCyIm2yscwtIcI2TnHfb52uoj7gqeoXDopsMSICQLzuiU5XC8j3hq0Pz6FEFAydo18IyHmqrpxmElIp4BUAKOu8jecAFizphbJyBS-zc-lHppl5v7Flbt5Ykuc8G0nL8S594mLR9PVmnblaxd5iHA"
   }
@@ -34,46 +40,38 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.title}
-            className="group relative aspect-[1.1/1] cursor-pointer overflow-hidden"
+            className="group relative aspect-[1.1/1] overflow-hidden"
           >
+            <Link
+              href={`/projects/${project.url}`}
+              className="absolute inset-0 z-30 cursor-pointer"
+              aria-label={`View ${project.title}`}
+            />
             <img
               alt={project.title}
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               src={project.image}
             />
 
-            <div className="absolute inset-0 flex flex-col justify-end bg-black/30 p-8 text-white transition-opacity duration-500 group-hover:bg-black/40 md:p-12">
-              <div className="flex items-center justify-between border-b border-white/20 pb-4">
+            <ProgressiveBlur height="40%" />
+            <div className="absolute inset-0 z-20 flex flex-col justify-end p-6 text-white md:p-8">
+              <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="text-2xl font-light tracking-widest uppercase md:text-3xl">
+                  <h3 className="text-2xl font-light tracking-widest uppercase md:text-2xl">
                     {project.title}
                   </h3>
                   <p className="mt-1 text-sm opacity-90">{project.location}</p>
                 </div>
 
-                <PiArrowUpRight
+                <PiArrowRight
                   size={28}
-                  className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                  className="transition-transform duration-300 group-hover:-rotate-45"
                 />
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      <section className="bg-[#F5F1E8] px-6 py-32 text-center md:px-12">
-        <div className="mx-auto max-w-4xl border-y border-black/5 py-24">
-          <h2 className="font-display mb-10 text-4xl italic md:text-6xl">
-            Have a project in mind?
-          </h2>
-          <a
-            className="font-display border-primary inline-block border-b pb-2 text-sm tracking-[0.3em] uppercase transition-opacity hover:opacity-50"
-            href="mailto:studio@kylemills.com"
-          >
-            Inquire for Collaboration
-          </a>
-        </div>
-      </section>
     </div>
   );
 }
