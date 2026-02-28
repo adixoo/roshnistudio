@@ -8,7 +8,7 @@ import {
   PiHouseFill
 } from "react-icons/pi";
 
-const services = [
+export const services = [
   {
     title: "London Residential",
     description:
@@ -25,9 +25,7 @@ const services = [
     title: "Wellness & Retreat",
     description:
       "Designing restorative spaces that prioritize health, mindfulness, and a seamless connection to the natural environment.",
-    icon: PiFlowerLotusFill,
-    image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuACA31WLf1Bx7GaYTStoxa5lFPsFwcHxnKme_UOg7YToh7WurQj0dVaX9Qr7Abj8h90e56DWKrbE-CJVwL3KECAvaFPKRpP5kjuJHHk3hMi5NNcdDDjFTN1vELyUdWd-xak9K0lADrMKsMvoihxIT2sc3OfJ7fIKsE3c8RMK8SVSwCh6iLU9a91nKtdYbjWbgSidXrSkLzxbOvGEIRT_ftwxFAbrLs6EKqVRBGMC5OOZ8_XCGa4W1jqMIHxgjABZr6lk1NOAjhyww"
+    icon: PiFlowerLotusFill
   },
   {
     title: "International Projects",

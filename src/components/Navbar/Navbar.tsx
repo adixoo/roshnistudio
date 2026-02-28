@@ -87,15 +87,10 @@ export default function Header() {
           />
         </Link>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex items-center gap-12"
-        >
+        <div className="flex items-center gap-12">
           <nav className="hidden space-x-6 text-xs font-medium tracking-[0.2em] uppercase md:flex">
             {NAV_LINKS.map((link) => (
-              <motion.div key={link.label} variants={itemVariants}>
+              <div key={link.label}>
                 <Link
                   href={link.href}
                   className="nav-link relative"
@@ -103,31 +98,30 @@ export default function Header() {
                 >
                   {link.label}
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </nav>
 
-          <motion.div variants={itemVariants} className="max-sm:hidden">
+          <div className="max-sm:hidden">
             <Link href="/contact">
               <Button variant={"outline"}>Let&apos;s Connect</Button>
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.button
-            variants={itemVariants}
+          <button
             onClick={() => setIsOpen(true)}
             className="text-sm font-medium tracking-widest uppercase md:hidden"
           >
             <MenuIcon className="size-8" />
             <span className="sr-only">navigation menu button</span>
-          </motion.button>
+          </button>
 
           <AnimatePresence>
             {isOpen && (
               <MobileNavbar isOpen={isOpen} onClose={() => setIsOpen(false)} />
             )}
           </AnimatePresence>
-        </motion.div>
+        </div>
       </div>
     </motion.header>
   );
