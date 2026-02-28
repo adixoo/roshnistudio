@@ -155,7 +155,7 @@ export default function MobileNavbar({ onClose }: MenuOverlayProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Whatsapp
+          Facebook
         </a>
       </motion.div>
     </motion.div>

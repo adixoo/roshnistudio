@@ -7,7 +7,5 @@ import PillarsStack from "./PillarsStack";
 export default function Pillars() {
   const isDesktop = useMediaQuery("(min-width: 768px)");
 
-  console.log(isDesktop);
-
   return isDesktop ? <PillarsStack /> : <PillarsMobile />;
 }

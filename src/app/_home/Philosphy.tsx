@@ -1,5 +1,3 @@
-import { Badge } from "@/components/ui/badge";
-
 export default function Philosophy() {
   return (
     <section className="bg-sand-50 py-32" id="philosophy">
@@ -13,7 +11,7 @@ export default function Philosophy() {
             />
           </div>
           <div className="order-1 md:order-2">
-            <Badge variant={"text"}>Our Belief</Badge>
+            {/* <Badge variant={"text"}>Our Belief</Badge> */}
             <h2 className="mt-6 mb-8 font-serif text-4xl leading-[1.1] md:text-5xl">
               A vessel for <br />
               mindfulness.
@@ -24,7 +22,7 @@ export default function Philosophy() {
               act as a sanctuary for the soul, where light, air, and materiality
               converge to support the human spirit.
             </p>
-            <div className="bg-primary mb-8 h-px w-24" />
+            <div className="bg-primary mb-8 h-0.5 w-24" />
 
             <p className="text-charcoal/60 text-lg leading-relaxed font-light italic">
               &quot;Every line we draw is an invitation to slow down.&quot;

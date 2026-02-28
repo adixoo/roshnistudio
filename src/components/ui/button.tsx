@@ -20,7 +20,7 @@ const buttonVariants = cva(
         default:
           "bg-primary text-primary-foreground [&_.slider]:bg-white/20 [&_.slider]:group-hover:bg-white",
         secondary:
-          "bg-secondary text-secondary-foreground [&_.slider]:bg-black/10 group-hover:[&_.slider]:bg-black [&_.arrow]:text-secondary-foreground group-hover:[&_.arrow]:text-white",
+          "bg-white text-charcoal [&_.slider]:bg-charcoal/20 [&_.slider]:group-hover:bg-charcoal [&_.slider]:group-hover:text-white",
         destructive:
           "bg-destructive text-destructive-foreground [&_.slider]:bg-white/20 group-hover:[&_.slider]:bg-white [&_.arrow]:text-white group-hover:[&_.arrow]:text-destructive",
         outline:

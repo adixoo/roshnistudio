@@ -56,21 +56,21 @@ export default function PillarsStack() {
                   {/* Left Content */}
                   <div className="flex flex-col justify-between p-16">
                     <div>
-                      <h3 className="mb-12 font-serif text-4xl leading-[1.1] md:text-6xl">
+                      <h3 className="mb-12 font-serif text-4xl leading-[1.1] md:text-5xl">
                         {pillar.title}
                       </h3>
 
                       <div className="space-y-0">
-                        <div className="border-t border-white/10 py-6">
+                        {/* <div className="border-t border-white/10 py-6">
                           <span className="mb-2 block font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
                             Location
                           </span>
                           <span className="text-lg font-light md:text-xl">
                             Remote / On-site
                           </span>
-                        </div>
+                        </div> */}
 
-                        <div className="grid grid-cols-3 gap-4 border-t border-white/10 py-6">
+                        {/* <div className="grid grid-cols-3 gap-4 border-t border-white/10 py-6">
                           <div>
                             <span className="mb-2 block font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
                               ID
@@ -95,9 +95,9 @@ export default function PillarsStack() {
                               Active
                             </span>
                           </div>
-                        </div>
+                        </div> */}
 
-                        <div className="border-t border-b border-white/10 py-8">
+                        <div className="border-t border-white/10 py-8">
                           <span className="mb-2 block font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
                             Approach
                           </span>
@@ -108,11 +108,11 @@ export default function PillarsStack() {
                       </div>
                     </div>
 
-                    <div className="mt-12">
+                    {/* <div className="mt-12">
                       <button className="hover:bg-sand-50 bg-white px-10 py-4 text-sm font-medium tracking-tight text-black transition-all active:scale-95">
                         View Project
                       </button>
-                    </div>
+                    </div> */}
                   </div>
 
                   {/* Right Image */}
