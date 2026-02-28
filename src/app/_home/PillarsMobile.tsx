@@ -59,21 +59,21 @@ export default function PillarsMobile() {
               {/* Text Content */}
               <div className="flex-1 md:max-w-[42%]">
                 <div className="mb-8 flex items-center gap-4">
-                  <span className="font-mono text-sm tracking-widest text-white/40">
+                  <span className="text-5xl text-white opacity-20">
                     {pillar.id}
                   </span>
                   <div className="h-px w-8 bg-white/20" />
-                  <span className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                  <span className="text-[10px] font-light tracking-[0.2em] text-white/40 uppercase">
                     {pillar.category}
                   </span>
                 </div>
 
-                <h2 className="mb-12 font-serif text-3xl leading-[1.2] text-white md:text-5xl">
+                <h2 className="mb-12 font-serif text-4xl leading-[1.1] text-white md:text-5xl">
                   {pillar.title}
                 </h2>
 
                 <div className="border-t border-white/10 py-10">
-                  <span className="mb-4 block font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                  <span className="mb-4 block text-[10px] tracking-[0.2em] text-white/40 uppercase">
                     Philosophy
                   </span>
                   <p className="text-base leading-relaxed font-light text-white/80">

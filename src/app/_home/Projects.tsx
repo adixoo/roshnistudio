@@ -6,8 +6,10 @@ export default function Projects() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-16 flex flex-col items-center gap-8 text-center">
           <div>
-            <h2 className="mb-4 font-serif text-5xl">Selected Works</h2>
-            <p className="text-primary-foreground/80 mx-auto max-w-md">
+            <h2 className="mb-4 font-serif text-4xl leading-[1.1] md:text-5xl">
+              Selected Works
+            </h2>
+            <p className="text-primary-foreground/80 mx-auto max-w-md text-base leading-relaxed font-light">
               A curation of projects defined by their relationship to light,
               site, and serenity.
             </p>

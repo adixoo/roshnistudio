@@ -16,7 +16,7 @@ export default function Philosophy() {
               A vessel for <br />
               mindfulness.
             </h2>
-            <p className="text-charcoal/80 mb-8 leading-relaxed font-light">
+            <p className="text-charcoal/80 mb-8 text-base leading-relaxed font-light">
               We believe a home is more than a structure; it is an instrument
               for wellbeing. Our practice is dedicated to creating spaces that
               act as a sanctuary for the soul, where light, air, and materiality
@@ -24,7 +24,7 @@ export default function Philosophy() {
             </p>
             <div className="bg-primary mb-8 h-0.5 w-24" />
 
-            <p className="text-charcoal/60 text-lg leading-relaxed font-light italic">
+            <p className="text-charcoal/60 font-serif text-lg leading-snug font-light italic md:text-xl">
               &quot;Every line we draw is an invitation to slow down.&quot;
             </p>
           </div>

@@ -67,22 +67,20 @@ export default function PillarsStack() {
                   <div className="flex flex-col justify-between p-8 md:p-16">
                     <div>
                       <div className="mb-8 flex items-center gap-4">
-                        <span className="font-mono text-sm tracking-widest text-white/40">
-                          {pillar.id}
-                        </span>
+                        <span className="text-5xl opacity-20">{pillar.id}</span>
                         <div className="h-px w-8 bg-white/20" />
-                        <span className="font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                        <span className="text-[10px] font-light tracking-[0.2em] text-white/40 uppercase">
                           {pillar.category}
                         </span>
                       </div>
 
-                      <h3 className="mb-12 font-serif text-3xl leading-[1.2] md:text-5xl lg:text-5xl">
+                      <h3 className="mb-12 font-serif text-4xl leading-[1.1] md:text-5xl">
                         {pillar.title}
                       </h3>
 
                       <div className="space-y-0">
                         <div className="border-t border-white/10 py-10">
-                          <span className="mb-4 block font-mono text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                          <span className="mb-4 block text-[10px] tracking-[0.2em] text-white/40 uppercase">
                             Philosophy
                           </span>
                           <div className="max-w-xl space-y-4">
