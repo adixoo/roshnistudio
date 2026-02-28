@@ -10,9 +10,6 @@ import {
 export default function FormComponent() {
   return (
     <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 lg:grid-cols-3">
-      <div className="flex h-90 items-center justify-center bg-white shadow lg:col-span-3">
-        Calendly link
-      </div>
       <Contact />
       <EnquiryForm />
     </section>
@@ -41,7 +38,8 @@ const contactItems = [
 
 const socialItems = [
   { label: "Instagram", href: StudioInfo.Instagram },
-  { label: "Pinterest", href: StudioInfo.Pinterest }
+  { label: "Pinterest", href: StudioInfo.Pinterest },
+  { label: "Facebook", href: StudioInfo.Facebook }
 ];
 
 function Contact() {
