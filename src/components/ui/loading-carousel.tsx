@@ -103,26 +103,26 @@ const textVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.5 } }
 };
 
-const aspectRatioClasses = {
-  video: "aspect-video",
-  square: "aspect-square",
-  wide: "aspect-[2/1]"
-};
+// const aspectRatioClasses = {
+//   video: "aspect-video",
+//   square: "aspect-square",
+//   wide: "aspect-[2/1]"
+// };
 
 export function LoadingCarousel({
   onTipChange,
   className,
   tips = defaultTips,
   showProgress = true,
-  aspectRatio = "video",
-  showNavigation = false,
+  // aspectRatio = "video",
+  // showNavigation = false,
   showIndicators = true,
   backgroundTips = false,
   textPosition = "bottom",
   autoplayInterval = 4500,
   backgroundGradient = false,
-  shuffleTips = false,
-  animateText = true
+  shuffleTips = false
+  // animateText = true
 }: LoadingCarouselProps) {
   const [progress, setProgress] = useState(0);
   const [api, setApi] = useState<CarouselApi>();
@@ -225,7 +225,7 @@ export function LoadingCarousel({
                     exit="exit"
                     custom={direction}
                     transition={{ duration: 0.8, ease: "easeInOut" }}
-                    className={`relative ${aspectRatioClasses[aspectRatio]} w-full overflow-hidden`}
+                    className={`relative aspect-square w-full overflow-hidden lg:aspect-video`}
                   >
                     <Image
                       src={tip.image}

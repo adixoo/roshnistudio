@@ -8,10 +8,10 @@ const Footer = () => (
           <h2 className="font-display mb-8 text-2xl tracking-widest uppercase">
             ROSHNI STUDIO
           </h2>
-          <p className="max-w-xs leading-relaxed opacity-60">
+          {/* <p className="max-w-xs leading-relaxed opacity-60">
             A design practice dedicated to human-centric architecture and the
             pursuit of quiet beauty.
-          </p>
+          </p> */}
         </div>
 
         <div>
@@ -72,7 +72,7 @@ const Footer = () => (
               target="_blank"
               rel="noopener noreferrer"
             >
-              Whatsapp
+              Facebook
             </a>
           </div>
         </div>

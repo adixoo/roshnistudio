@@ -5,7 +5,7 @@ import LoadingCarousel from "@/components/ui/loading-carousel";
 
 export default function Hero() {
   return (
-    <section>
+    <section className="bg-sand-50">
       <div className="flex items-center justify-center px-4 py-10 pt-40 text-center">
         <div className="max-w-4xl">
           <Badge>Residential & Wellness Studio</Badge>
