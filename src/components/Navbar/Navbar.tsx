@@ -10,16 +10,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { HiOutlineMenuAlt4 as MenuIcon } from "react-icons/hi";
+import { PiCaretDown } from "react-icons/pi";
 import logo from "../../../public/logo.png";
 import { Button } from "../ui/button";
 import { TextAnimate } from "../ui/text-animate";
 import MobileNavbar from "./MobileNavbar";
 
 const SERVICES_LINKS = [
-  { label: "Interior Design", href: "/services#interior" },
-  { label: "Architecture", href: "/services#architecture" },
-  { label: "Project Management", href: "/services#management" },
-  { label: "Consultation", href: "/services#consultation" }
+  { label: "London Residential", href: "/services#interior" },
+  { label: "Feasibility Studies", href: "/services#architecture" },
+  { label: "Wellness & Retreat", href: "/services#management" },
+  { label: "International Projects", href: "/services#consultation" },
+  { label: "3D Scanning & BIM", href: "/services#consultation" },
+  { label: "Property Advisory", href: "/services#consultation" }
 ];
 
 const NAV_LINKS = [
@@ -27,24 +30,6 @@ const NAV_LINKS = [
   { label: "Projects", href: "/projects" },
   { label: "Services", href: "/services" }
 ];
-
-const containerVariants = {
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.1
-    }
-  }
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: -10 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.5, ease: "easeOut" }
-  }
-} as const;
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -114,7 +99,17 @@ export default function Header() {
                   className="nav-link relative"
                   prefetch={false}
                 >
-                  {link.label}
+                  <div className="flex items-center gap-1">
+                    {link.label}
+                    {link.label === "Services" && (
+                      <motion.span
+                        animate={{ rotate: isServicesHovered ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <PiCaretDown className="size-3.5" />
+                      </motion.span>
+                    )}
+                  </div>
                 </Link>
 
                 {link.label === "Services" && (
