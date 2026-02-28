@@ -1,5 +1,5 @@
+import { Button } from "@/components/ui/button";
 import {
-  PiArrowRightFill,
   PiChartLineUpFill,
   PiCubeTransparentFill,
   PiFlowerLotusFill,
@@ -58,27 +58,27 @@ export default function Services() {
             return (
               <div
                 key={index}
-                className={`group relative flex h-[450px] flex-col justify-between overflow-hidden bg-white p-8 transition-all duration-500 lg:p-12`}
+                className={`relative flex h-[450px] flex-col justify-between overflow-hidden bg-white p-8 transition-all duration-500 lg:p-12`}
               >
                 <div className="relative z-10">
                   <div className={`mb-8`}>
                     <Icon size={42} className="text-charcoal/70" />
                   </div>
 
-                  <h3 className="mb-4 font-serif text-2xl">{service.title}</h3>
+                  <h3 className="mb-4 font-serif text-2xl leading-snug lg:text-3xl">
+                    {service.title}
+                  </h3>
 
-                  <p className={`text-charcoal/60 leading-relaxed`}>
+                  <p
+                    className={`text-charcoal/60 text-base leading-relaxed font-light`}
+                  >
                     {service.description}
                   </p>
                 </div>
 
-                <a
-                  href="#"
-                  className="text-primary relative z-10 flex items-center gap-2 text-xs font-medium tracking-widest uppercase transition-all group-hover:gap-4"
-                >
-                  Explore Service
-                  <PiArrowRightFill size={14} />
-                </a>
+                <div>
+                  <Button variant={"outline"}>Explore Service</Button>
+                </div>
               </div>
             );
           })}

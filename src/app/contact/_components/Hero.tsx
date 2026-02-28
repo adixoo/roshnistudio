@@ -8,10 +8,10 @@ export default function Hero() {
         {/* Left Side: Content */}
         <div className="pt-12">
           <Badge>Inquiry & Consultations</Badge>
-          <h1 className="text-charcoal mt-8 font-serif text-5xl md:text-6xl">
+          <h1 className="text-charcoal mt-8 font-serif text-5xl leading-[1.1] md:text-6xl">
             Let&apos;s discuss your <br /> next project.
           </h1>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-slate-500">
+          <p className="text-charcoal/80 mt-6 max-w-md text-lg leading-relaxed">
             Ready to bring your vision to life? Whether you&apos;re looking for
             a feasibility study or a full residential design, we&apos;ve made it
             easy to start. Book a meeting directly via our calendar or send us
