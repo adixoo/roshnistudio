@@ -5,5 +5,6 @@ export enum StudioInfo {
   WorkingDays = "Monday - Friday",
   Instagram = "https://www.instagram.com/roshnidesignstudio",
   Pinterest = "tbc",
-  Facebook = "tbc1"
+  Facebook = "tbc1",
+  Calendly = "https://calendly.com/muskianand89/30min?text_color=181b1f&primary_color=ebcb90"
 }
