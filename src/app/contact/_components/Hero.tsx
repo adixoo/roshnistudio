@@ -3,10 +3,10 @@ import Script from "next/script";
 
 export default function Hero() {
   return (
-    <section className="py-24 pt-40">
-      <div className="mx-auto flex max-w-7xl flex-col gap-16 px-4 md:flex-row">
+    <section className="py-8 pt-40">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-4 md:grid-cols-2">
         {/* Left Side: Content */}
-        <div className="w-full pt-12 md:w-1/2">
+        <div className="pt-12">
           <Badge>Inquiry & Consultations</Badge>
           <h1 className="text-charcoal mt-8 font-serif text-5xl md:text-6xl">
             Let&apos;s discuss your <br /> next project.
@@ -20,11 +20,11 @@ export default function Hero() {
         </div>
 
         {/* Right Side: Calendly Widget */}
-        <div className="min-h-[600px] w-full overflow-hidden border border-slate-100 bg-slate-50 md:w-1/2">
+        <div className="min-h-[600px] overflow-hidden border border-slate-100 bg-slate-50">
           <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/muskianand89/30min?text_color=181818&primary_color=00ff7d"
-            style={{ minWidth: "320px", height: "600px" }}
+            data-url="https://calendly.com/muskianand89/30min?text_color=181b1f&primary_color=ebcb90"
+            style={{ minWidth: "320px", height: "100%" }}
           ></div>
 
           <Script
