@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <Badge>Specialized Expertise</Badge>
-          <h1 className="text-charcoal mt-8 mb-8 font-serif text-5xl leading-tight lg:text-7xl">
+          <h1 className="text-charcoal mt-8 mb-8 font-serif text-5xl leading-[1.1] lg:text-6xl">
             Architectural services shaped around clarity, quality, and long-term
             value.
           </h1>

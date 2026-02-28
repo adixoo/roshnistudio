@@ -7,10 +7,10 @@ export default function CTA() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid gap-4 md:grid-cols-2">
           <div className="bg-accent flex flex-col justify-center p-12 md:p-20">
-            <h3 className="mb-6 font-serif text-5xl text-white italic">
+            <h3 className="mb-6 font-serif text-4xl leading-[1.1] font-light text-white italic md:text-6xl">
               Meaningful Places
             </h3>
-            <p className="mb-8 leading-relaxed text-white/70">
+            <p className="mb-8 text-base leading-relaxed font-light text-white/70">
               Our studio specializes in residential and wellness design. We
               believe that the environments we inhabit profoundly influence our
               mental and physical well-being.

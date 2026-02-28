@@ -16,7 +16,7 @@ Consistency in typography is key to maintaining the refined, intentional aesthet
 
 | Level          | Desktop (md+) | Mobile     | Leading         | Usage                                                 |
 | :------------- | :------------ | :--------- | :-------------- | :---------------------------------------------------- |
-| **Hero H1**    | `text-7xl`    | `text-5xl` | `leading-[1.1]` | Main landing page hero section.                       |
+| **Hero H1**    | `text-6xl`    | `text-5xl` | `leading-[1.1]` | Main landing page hero section.                       |
 | **Section H2** | `text-5xl`    | `text-4xl` | `leading-[1.1]` | Primary section headings (Philosophy, Projects, etc). |
 | **Display H2** | `text-6xl`    | `text-4xl` | `leading-[1.1]` | High-impact CTA sections.                             |
 | **Label H3**   | `text-3xl`    | `text-2xl` | `leading-snug`  | Component titles, quotes, and pillars.                |

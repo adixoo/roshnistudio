@@ -47,12 +47,17 @@ export default function Approach() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="mb-20 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-xl space-y-4">
-            <Badge variant={"text"}>Our approach</Badge>
-            <h2 className="text-charcoal dark:text-accent-cream font-serif text-4xl md:text-6xl">
+            <Badge
+              variant={"text"}
+              className="text-xs font-light tracking-widest uppercase"
+            >
+              Our approach
+            </Badge>
+            <h2 className="text-charcoal dark:text-accent-cream font-serif text-4xl leading-[1.1] font-light md:text-6xl">
               How We Work
             </h2>
           </div>
-          <p className="text-charcoal/80 max-w-md leading-relaxed">
+          <p className="text-charcoal/80 max-w-md text-base leading-relaxed font-light">
             Our process is iterative, transparent, and deeply collaborative. We
             believe the best results come from a shared vision.
           </p>
@@ -63,7 +68,7 @@ export default function Approach() {
             const Icon = step.icon;
             return (
               <div key={index} className="group relative">
-                <div className="pointer-events-none absolute -top-16 -left-4 font-serif text-[9rem] opacity-10">
+                <div className="pointer-events-none absolute -top-16 -left-4 font-mono text-5xl opacity-40">
                   {step.number}
                 </div>
 
@@ -72,11 +77,11 @@ export default function Approach() {
                     <Icon className="text-xl text-white" />
                   </div>
 
-                  <h4 className="text-charcoal font-serif text-2xl font-bold">
+                  <h3 className="text-charcoal font-serif text-2xl leading-snug font-light md:text-3xl">
                     {step.title}
-                  </h4>
+                  </h3>
 
-                  <p className="text-charcoal/70 dark:text-accent-cream/70 leading-relaxed">
+                  <p className="text-charcoal/70 dark:text-accent-cream/70 leading-relaxed font-light">
                     {step.description}
                   </p>
                 </div>

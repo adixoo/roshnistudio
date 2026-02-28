@@ -40,7 +40,7 @@ export default function ProjectsPage() {
           <div className="mx-auto flex max-w-7xl flex-col items-center px-4 text-center">
             <Badge> roshni studio portfolio</Badge>
 
-            <h1 className="mt-8 mb-10 font-serif text-6xl leading-[0.9] font-light">
+            <h1 className="mt-8 mb-10 font-serif text-5xl leading-[1.1] font-light md:text-6xl">
               Selected Projects
             </h1>
           </div>

@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="relative z-10 max-w-4xl">
           <Badge>Residential & Wellness Studio</Badge>
 
-          <h1 className="mt-8 mb-12 font-serif text-5xl leading-[1.1] font-light md:text-7xl">
+          <h1 className="mt-8 mb-12 font-serif text-5xl leading-[1.1] font-light md:text-6xl">
             Architecture Design guided by{" "}
             <span className="font-medium italic">Human Biology</span>, not
             trends.
