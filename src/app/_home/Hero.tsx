@@ -1,7 +1,7 @@
-import ConsultationOverlay from "@/components/ConsultationOverlay";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import LoadingCarousel from "@/components/ui/loading-carousel";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -16,9 +16,11 @@ export default function Hero() {
             trends.
           </h1>
 
-          <ConsultationOverlay layoutId="hero">
+          {/* <ConsultationOverlay layoutId="hero"> */}
+          <Link href="/contact">
             <Button>Book A Consultation</Button>
-          </ConsultationOverlay>
+          </Link>
+          {/* </ConsultationOverlay> */}
         </div>
 
         {/* <div

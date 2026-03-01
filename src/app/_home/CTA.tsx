@@ -1,5 +1,5 @@
-import ConsultationOverlay from "@/components/ConsultationOverlay";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -15,9 +15,11 @@ export default function CTA() {
               Begin the conversation about your next architectural project. We
               work globally with clients who value intention and atmosphere.
             </p>
-            <ConsultationOverlay layoutId="cta">
+            {/* <ConsultationOverlay layoutId="cta"> */}
+            <Link href="/contact">
               <Button variant={"secondary"}>Book a consultation</Button>
-            </ConsultationOverlay>
+            </Link>
+            {/* </ConsultationOverlay> */}
           </div>
           <div className="hidden md:block">
             <img
