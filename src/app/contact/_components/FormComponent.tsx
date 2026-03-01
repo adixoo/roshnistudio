@@ -2,6 +2,7 @@ import { StudioInfo } from "@/constant/info";
 import EnquiryForm from "./Form";
 
 import {
+  PiArrowUpRight,
   PiEnvelopeSimpleFill,
   PiMapPinFill,
   PiPhoneFill
@@ -97,16 +98,16 @@ function Contact() {
             Follow Us
           </p>
 
-          <div className="flex space-x-6 text-sm font-medium">
+          <div className="text-charcoal/80 flex space-x-6 text-sm font-medium">
             {socialItems.map(({ label, href }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-charcoal/80 nav-link relative"
+                className="nav-link relative inline-flex items-center gap-1"
               >
-                {label}
+                {label} <PiArrowUpRight />
               </a>
             ))}
           </div>

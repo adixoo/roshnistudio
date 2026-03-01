@@ -54,7 +54,7 @@ export default function Hero() {
   );
 }
 
-function GridBg() {
+export function GridBg() {
   return (
     <div
       className="absolute inset-0 z-0 opacity-60"

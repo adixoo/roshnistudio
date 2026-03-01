@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -7,7 +8,9 @@ export default function CTA() {
         <h2 className="font-display mb-10 font-serif text-4xl md:text-5xl">
           Have a project in mind?
         </h2>
-        <Button>Inquire for Collaboration</Button>
+        <Link href={"/contact"}>
+          <Button>Inquire for Collaboration</Button>
+        </Link>
       </div>
     </section>
   );
