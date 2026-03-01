@@ -1,11 +1,20 @@
 import { StudioInfo } from "@/constant/info";
 import Image from "next/image";
+import Link from "next/link";
 import { PiArrowUpRight } from "react-icons/pi";
+
+const navLinks = [
+  { title: "Home", href: "/" },
+  { title: "The Studio", href: "/profile" },
+  { title: "Projects", href: "/projects" },
+  { title: "Services", href: "/services" },
+  { title: "Let's Connect", href: "/contact" }
+];
 
 const Footer = () => (
   <footer className="bg-sand-50 px-6 pt-24 pb-12">
     <div className="mx-auto max-w-7xl">
-      <div className="mb-20 grid grid-cols-1 gap-12 md:grid-cols-4">
+      <div className="mb-20 grid grid-cols-1 gap-12 md:grid-cols-5">
         <div className="md:col-span-2">
           <Image
             src="/logo.png"
@@ -19,6 +28,21 @@ const Footer = () => (
             A design practice dedicated to human-centric architecture and the
             pursuit of quiet beauty.
           </p> */}
+        </div>
+
+        <div>
+          <h3 className="mb-6 text-xs font-bold tracking-widest uppercase">
+            Links
+          </h3>
+          <ul className="space-y-4 text-sm opacity-80">
+            {navLinks.map((link) => (
+              <li key={link.title}>
+                <Link className="nav-link relative" href={link.href}>
+                  {link.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div>
