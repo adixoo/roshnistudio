@@ -55,36 +55,42 @@ const Footer = () => (
           <h3 className="mb-6 text-xs font-bold tracking-widest uppercase">
             Follow
           </h3>
-          <div className="flex space-x-6 text-sm opacity-80">
-            <a
-              className="nav-link relative inline-flex items-center gap-1"
-              href={StudioInfo.Instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Instagram
-              <PiArrowUpRight />
-            </a>
+          <ul className="space-y-4 text-sm opacity-80">
+            <li>
+              <a
+                className="nav-link relative inline-flex items-center gap-1"
+                href={StudioInfo.Instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+                <PiArrowUpRight />
+              </a>
+            </li>
 
-            <a
-              className="nav-link relative inline-flex items-center gap-1"
-              href={StudioInfo.Pinterest}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Pinterest
-              <PiArrowUpRight />
-            </a>
-            <a
-              className="nav-link relative inline-flex items-center gap-1"
-              href={StudioInfo.Facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Facebook
-              <PiArrowUpRight />
-            </a>
-          </div>
+            <li>
+              <a
+                className="nav-link relative inline-flex items-center gap-1"
+                href={StudioInfo.Pinterest}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Pinterest
+                <PiArrowUpRight />
+              </a>
+            </li>
+            <li>
+              <a
+                className="nav-link relative inline-flex items-center gap-1"
+                href={StudioInfo.Facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Facebook
+                <PiArrowUpRight />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="from-primary to-primary/10 bg-linear-to-t bg-clip-text text-center font-serif text-4xl text-transparent uppercase opacity-50 md:text-5xl lg:text-9xl">

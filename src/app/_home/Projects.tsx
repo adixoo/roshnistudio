@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { ParallaxScroll } from "@/components/ui/parallax-scroll";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import ProjectsGridView from "./ProjectsGridView";
@@ -36,6 +37,9 @@ export default function Projects() {
         ) : (
           <ProjectsGridView projects={images} />
         )}
+      </div>
+      <div className="mx-auto mt-16 w-max lg:mt-24">
+        <Button variant={"outline"}>View More Projects</Button>
       </div>
     </section>
   );
