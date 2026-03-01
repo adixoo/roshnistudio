@@ -1,14 +1,22 @@
 "use client";
+import { ArrowUpRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
+import Link from "next/link";
 import { useRef } from "react";
 
 import { cn } from "@/lib/utils";
+
+export interface ProjectItem {
+  src: string;
+  name: string;
+  link: string;
+}
 
 export const ParallaxScroll = ({
   images,
   className
 }: {
-  images: string[];
+  images: ProjectItem[];
   className?: string;
 }) => {
   const gridRef = useRef<any>(null);
@@ -21,58 +29,79 @@ export const ParallaxScroll = ({
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
   const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
-  const third = Math.ceil(images.length / 3);
+  // const third = Math.ceil(images.length / 3);
 
-  const firstPart = images.slice(0, third);
-  const secondPart = images.slice(third, 2 * third);
-  const thirdPart = images.slice(2 * third);
+  const firstPart = images.slice(0, 2);
+  const secondPart = images.slice(3, 7);
+  const thirdPart = images.slice(7, 10);
 
   return (
     <div className={cn("w-full items-start", className)} ref={gridRef}>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-4 py-40 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-4 px-4 py-40 md:grid-cols-2 lg:grid-cols-3">
         <div className="grid gap-4">
           {firstPart.map((el, idx) => (
-            <motion.div
-              style={{ y: translateFirst }} // Apply the translateY motion value here
+            <ProjectCard
               key={"grid-1" + idx}
-            >
-              <img
-                src={el}
-                className="m-0! h-auto w-full gap-4 object-cover object-top-left p-0!"
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-            </motion.div>
+              project={el}
+              translateY={translateFirst}
+            />
           ))}
         </div>
         <div className="grid gap-4">
           {secondPart.map((el, idx) => (
-            <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
-              <img
-                src={el}
-                className="m-0! h-auto w-full gap-4 object-cover object-top-left p-0!"
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-            </motion.div>
+            <ProjectCard
+              key={"grid-2" + idx}
+              project={el}
+              translateY={translateSecond}
+            />
           ))}
         </div>
         <div className="grid gap-4">
           {thirdPart.map((el, idx) => (
-            <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
-              <img
-                src={el}
-                className="m-0! h-auto w-full gap-4 object-cover object-top-left p-0!"
-                height="400"
-                width="400"
-                alt="thumbnail"
-              />
-            </motion.div>
+            <ProjectCard
+              key={"grid-3" + idx}
+              project={el}
+              translateY={translateThird}
+            />
           ))}
         </div>
       </div>
     </div>
+  );
+};
+
+const ProjectCard = ({
+  project,
+  translateY
+}: {
+  project: ProjectItem;
+  translateY: any;
+}) => {
+  return (
+    <motion.div
+      style={{ y: translateY }}
+      className="group relative overflow-hidden"
+    >
+      <Link href={project.link} className="block cursor-pointer">
+        <div className="relative aspect-auto">
+          <img
+            src={project.src}
+            className="m-0! h-auto w-full gap-4 object-cover object-top-left p-0! transition-transform duration-500 group-hover:scale-105"
+            height="400"
+            width="400"
+            alt={project.name}
+          />
+          {/* Overlay */}
+          <div className="absolute inset-0 flex flex-col justify-end bg-black/40 p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div className="flex items-center justify-between text-white">
+              <h3 className="text-xl md:text-2xl">{project.name}</h3>
+              <div className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                <ArrowUpRight className="size-8" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Link>
+    </motion.div>
   );
 };

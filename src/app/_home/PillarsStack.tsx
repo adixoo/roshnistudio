@@ -48,7 +48,7 @@ const PILLARS = [
 export default function PillarsStack() {
   return (
     <section className="bg-charcoal overflow-hidden">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-4">
         <div>
           <ScrollStack
             itemDistance={40}
@@ -64,7 +64,7 @@ export default function PillarsStack() {
               >
                 <div className="grid h-full md:grid-cols-[1.2fr_1fr]">
                   {/* Left Content */}
-                  <div className="flex flex-col justify-between p-8 md:p-16">
+                  <div className="flex flex-col justify-between py-8 pr-16 md:py-16">
                     <div>
                       <div className="mb-8 flex items-center gap-4">
                         <span className="text-5xl opacity-20">{pillar.id}</span>
