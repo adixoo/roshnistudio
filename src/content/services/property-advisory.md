@@ -17,13 +17,13 @@ We act as your architectural advisor and connect you with a vetted network of Lo
 
 ## How the Process Works
 
-| Stage | What Happens |
-|-------|-------------|
-| **1. Initial Consultation** | We clarify your objectives, budget, preferred locations, and long-term plans. You'll also get a clear overview of the London market and purchase process. |
-| **2. Property Search Alignment** | We introduce you to suitable estate agents and advisors, ensuring the search reflects your architectural, lifestyle, and investment goals. |
-| **3. Architectural Appraisal** | We review shortlisted properties — assessing renovation potential, planning constraints, and strategic suitability — before you make an offer. |
-| **4. Legal & Purchase Coordination** | We introduce you to solicitors experienced in London transactions for international buyers and coordinate throughout the purchase phase. |
-| **5. Design & Renovation** | Where appropriate, we move directly into full architectural services for renovation, extension, or redevelopment. |
+| Stage                                | What Happens                                                                                                                                              |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1. Initial Consultation**          | We clarify your objectives, budget, preferred locations, and long-term plans. You'll also get a clear overview of the London market and purchase process. |
+| **2. Property Search Alignment**     | We introduce you to suitable estate agents and advisors, ensuring the search reflects your architectural, lifestyle, and investment goals.                |
+| **3. Architectural Appraisal**       | We review shortlisted properties — assessing renovation potential, planning constraints, and strategic suitability — before you make an offer.            |
+| **4. Legal & Purchase Coordination** | We introduce you to solicitors experienced in London transactions for international buyers and coordinate throughout the purchase phase.                  |
+| **5. Design & Renovation**           | Where appropriate, we move directly into full architectural services for renovation, extension, or redevelopment.                                         |
 
 ---
 

@@ -4,7 +4,7 @@ export enum StudioInfo {
   Hours = "9:00 AM - 5:30 PM",
   WorkingDays = "Monday - Friday",
   Instagram = "https://www.instagram.com/roshnidesignstudio",
-  Pinterest = "tbc",
-  Facebook = "tbc1",
+  Pinterest = "https://uk.pinterest.com/daswani0660/",
+  Facebook = "https://www.facebook.com/Roshnidesignstudio/",
   Calendly = "https://calendly.com/muskianand89/30min?text_color=181b1f&primary_color=ebcb90"
 }

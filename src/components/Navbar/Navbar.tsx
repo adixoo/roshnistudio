@@ -1,5 +1,6 @@
 "use client";
 
+import { services } from "@/constant/services";
 import {
   AnimatePresence,
   motion,
@@ -16,14 +17,7 @@ import { Button } from "../ui/button";
 import { TextAnimate } from "../ui/text-animate";
 import MobileNavbar from "./MobileNavbar";
 
-const SERVICES_LINKS = [
-  { label: "London Residential", href: "/services#interior" },
-  { label: "Feasibility Studies", href: "/services#architecture" },
-  { label: "Wellness & Retreat", href: "/services#management" },
-  { label: "International Projects", href: "/services#consultation" },
-  { label: "3D Scanning & BIM", href: "/services#consultation" },
-  { label: "Property Advisory", href: "/services#consultation" }
-];
+const SERVICES_LINKS = services;
 
 const NAV_LINKS = [
   { label: "The Studio", href: "/profile" },
@@ -125,12 +119,12 @@ export default function Header() {
                         <div className="flex flex-col gap-1">
                           {SERVICES_LINKS.map((service) => (
                             <Link
-                              key={service.label}
-                              href={service.href}
+                              key={service.slug}
+                              href={`/services/${service.slug}`}
                               className="group flex flex-col px-4 py-3 transition-colors hover:bg-black/5"
                             >
                               <TextAnimate
-                                text={service.label}
+                                text={service.title}
                                 type="whipInUp"
                                 className="text-charcoal/80 group-hover:text-charcoal m-0 p-0 text-[12px] font-semibold tracking-widest transition-colors"
                               />

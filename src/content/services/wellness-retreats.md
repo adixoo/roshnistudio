@@ -7,7 +7,7 @@ description: "We design wellness retreats, resorts, and mindful residential spac
 
 **Places built for rest. Designed to last.**
 
-Wellbeing isn't an add-on — it's the starting point. We work on wellness-led projects where calm, restorative environments are central to the brief: retreats, resorts, and residential developments where how a space *feels* is just as important as how it looks.
+Wellbeing isn't an add-on — it's the starting point. We work on wellness-led projects where calm, restorative environments are central to the brief: retreats, resorts, and residential developments where how a space _feels_ is just as important as how it looks.
 
 We bring residential-scale care and sensitivity to larger environments, ensuring every space supports rest, retreat, and long-term use.
 

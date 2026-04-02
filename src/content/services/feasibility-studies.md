@@ -26,12 +26,12 @@ A pre-purchase feasibility study gives you an honest, architectural view of what
 
 ## How It Works
 
-| Step | What Happens |
-|------|-------------|
-| **Discovery Call** | We discuss your brief, lifestyle goals, and timeline |
+| Step                       | What Happens                                                  |
+| -------------------------- | ------------------------------------------------------------- |
+| **Discovery Call**         | We discuss your brief, lifestyle goals, and timeline          |
 | **Site & Document Review** | We review the agent pack, plans, photos, and planning context |
-| **Feasibility Study** | We produce options and clear recommendations |
-| **Presentation & Q&A** | We walk you through findings and agree next steps |
+| **Feasibility Study**      | We produce options and clear recommendations                  |
+| **Presentation & Q&A**     | We walk you through findings and agree next steps             |
 
 ---
 
