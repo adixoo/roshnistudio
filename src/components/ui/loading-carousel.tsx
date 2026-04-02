@@ -45,32 +45,23 @@ interface LoadingCarouselProps {
 const defaultTips: Tip[] = [
   {
     text: "Backend snippets. Shadcn style headless components.. but for your backend.",
-    image: "/images/img1.jpg",
-    url: "https://www.newcult.co/backend"
+    image: "/images/hero/img1.webp"
   },
   {
     text: "Create your first directory app today. AI batch scripts to process 100s of urls in seconds.",
-    image: "/images/img2.jpg",
-
-    url: "https://www.newcult.co/templates/cult-seo"
+    image: "/images/hero/img2.webp"
   },
   {
     text: "Cult landing page template. Framer motion, shadcn, and tailwind.",
-    image: "/images/img3.jpg",
-
-    url: "https://www.newcult.co/templates/cult-landing-page"
+    image: "/images/hero/img3.webp"
   },
   {
     text: "Vector embeddings, semantic search, and chat based vector retrieval on easy mode.",
-    image: "/images/img4.jpg",
-
-    url: "https://www.newcult.co/templates/manifest"
+    image: "/images/hero/img4.webp"
   },
   {
     text: "SEO analysis app. Scraping, analysis, insights, and AI recommendations.",
-    image: "/images/img5.jpg",
-
-    url: "https://www.newcult.co/templates/cult-seo"
+    image: "/images/hero/img5.webp"
   }
 ];
 
@@ -234,8 +225,9 @@ export function LoadingCarousel({
                       className="object-cover"
                       priority
                     />
+
                     {backgroundGradient && (
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                      <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent" />
                     )}
 
                     {backgroundTips ? (
@@ -270,11 +262,11 @@ export function LoadingCarousel({
             </AnimatePresence>
           </CarouselContent>
           {/* {showNavigation && (
-            <>
-              <CarouselPrevious className="absolute top-1/2 left-2 -translate-y-1/2" />
-              <CarouselNext className="absolute top-1/2 right-2 -translate-y-1/2" />
-            </>
-          )} */}
+             <>
+               <CarouselPrevious className="absolute top-1/2 left-2 -translate-y-1/2" />
+               <CarouselNext className="absolute top-1/2 right-2 -translate-y-1/2" />
+             </>
+            )} */}
         </Carousel>
         <div>
           <div
@@ -308,58 +300,58 @@ export function LoadingCarousel({
             )}
             <div className="text-primary flex items-center space-x-2 whitespace-nowrap">
               {/* {backgroundTips ? (
-                <span className="text-sm font-medium">
-                  Tip {current + 1}/{displayTips?.length || 0}
-                </span>
-              ) : (
-                <div className="flex flex-col">
-                  {displayTips[current]?.url ? (
-                    <a
-                      href={displayTips[current]?.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-base font-medium tracking-tight lg:text-2xl xl:font-semibold"
-                    >
-                      {animateText ? (
-                        <TextScramble
-                          key={displayTips[current]?.text}
-                          duration={1.2}
-                          characterSet=". "
-                        >
-                          {displayTips[current]?.text}
-                        </TextScramble>
-                      ) : (
-                        displayTips[current]?.text
-                      )}
-                    </a>
-                  ) : (
-                    <span className="text-base font-medium tracking-tight lg:text-2xl xl:font-semibold">
-                      {animateText ? (
-                        <TextScramble
-                          key={displayTips[current]?.text}
-                          duration={1.2}
-                          characterSet=". "
-                        >
-                          {displayTips[current]?.text}
-                        </TextScramble>
-                      ) : (
-                        displayTips[current]?.text
-                      )}
-                    </span>
-                  )}
-                </div>
-              )} */}
+                 <span className="text-sm font-medium">
+                   Tip {current + 1}/{displayTips?.length || 0}
+                 </span>
+                ) : (
+                 <div className="flex flex-col">
+                   {displayTips[current]?.url ? (
+                     <a
+                       href={displayTips[current]?.url}
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="text-base font-medium tracking-tight lg:text-2xl xl:font-semibold"
+                     >
+                       {animateText ? (
+                         <TextScramble
+                           key={displayTips[current]?.text}
+                           duration={1.2}
+                           characterSet=". "
+                         >
+                           {displayTips[current]?.text}
+                         </TextScramble>
+                       ) : (
+                         displayTips[current]?.text
+                       )}
+                     </a>
+                   ) : (
+                     <span className="text-base font-medium tracking-tight lg:text-2xl xl:font-semibold">
+                       {animateText ? (
+                         <TextScramble
+                           key={displayTips[current]?.text}
+                           duration={1.2}
+                           characterSet=". "
+                         >
+                           {displayTips[current]?.text}
+                         </TextScramble>
+                       ) : (
+                         displayTips[current]?.text
+                       )}
+                     </span>
+                   )}
+                 </div>
+                )} */}
               {backgroundTips && <ChevronRight className="h-4 w-4" />}
             </div>
           </div>
           {/* {showProgress && (
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={controls}
-              transition={{ duration: 0.5, ease: "linear" }}
-              className="bg-charcoal h-1 origin-left"
-            />
-          )} */}
+             <motion.div
+               initial={{ scaleX: 0 }}
+               animate={controls}
+               transition={{ duration: 0.5, ease: "linear" }}
+               className="bg-charcoal h-1 origin-left"
+             />
+            )} */}
         </div>
       </div>
     </motion.div>
