@@ -27,7 +27,7 @@ export default function PillarsMobile({ pillars }: PillarsMobileProps) {
                     {pillar.id}
                   </span>
                   <div className="h-px w-8 bg-white/20" />
-                  <span className="text-[10px] font-light tracking-[0.2em] text-white/40 uppercase">
+                  <span className="text-[0.625rem] tracking-[0.2em] text-white/40 uppercase">
                     {pillar.category}
                   </span>
                 </div>
@@ -37,7 +37,7 @@ export default function PillarsMobile({ pillars }: PillarsMobileProps) {
                 </h2>
 
                 <div className="border-t border-white/10 py-10">
-                  <span className="mb-4 block text-[10px] tracking-[0.2em] text-white/40 uppercase">
+                  <span className="mb-4 block text-[0.625rem] tracking-[0.2em] text-white/40 uppercase">
                     Philosophy
                   </span>
                   <div className="space-y-4">
