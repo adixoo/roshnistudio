@@ -1,13 +1,16 @@
+import Image from "next/image";
+import img from "../../../public/images/img.jpg";
+
 export default function Philosophy() {
   return (
     <section className="bg-sand-50 py-32" id="philosophy">
       <div className="mx-auto max-w-7xl px-4">
         <div className="grid items-center gap-24 md:grid-cols-2">
           <div className="order-2 md:order-1">
-            <img
+            <Image
               alt="A vessel for mindfulness"
               className="aspect-4/5 w-full object-cover shadow-2xl"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGWEM7gVFoNtC0LUA0OIOirxvbGhW0GTxYJSXFBZU8_-rykAVwPKyKsL7LC1JiTgDMfqPMVBW0JIZy2nMPLOYsNk4KXbwf_Zo9uTl9Z88WTrulEYlFC-zaU570XUmpUAUP1sdXIff2Yr63YrZU6I0P7WBN8UzV-2uCAtSNzF26zViUk2D-qWkIZt6x_uUe3hwBjcUw_lcXPp0fpM-n4ntUWEds3T51GO3ePlTWUnFm2riIZ6N5Fn83nt2AwcriKMfVCRZ4i5HZ1w"
+              src={img}
             />
           </div>
           <div className="order-1 md:order-2">
