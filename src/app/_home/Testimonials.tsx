@@ -3,21 +3,21 @@ import { PiQuotesFill } from "react-icons/pi";
 const TESTIMONIALS = [
   {
     quote:
-      "Impeccable detailing and a calm, considered process from concept to site.",
-    client: "Private Client",
-    location: "Residential Villa, Switzerland"
+      "Roshni Studio were the interior designers for my boutique personal training studio in West London and I am thrilled with the result. The design process flowed smoothly to a very short timeline and fixed budget. Ritika maximised the use of the space and she was always available and open to discussing and incorporating feedback. The final design is contemporary, beautiful and practical - it surpassed my expectations. I would definitely recommend Roshni Studio.",
+    client: "Jozef Jurik",
+    location: "Blackline EMS Personal Training Studio White City"
   },
   {
     quote:
-      "A profound understanding of how light influences emotion. Our home feels like a sanctuary.",
-    client: "Wellness Director",
-    location: "Boutique Retreat, Oxfordshire"
+      "Roshni Studio were the architects for my investment project. My project was a new build development in London with apartments. They provided me with a full service and were very efficient and transparent with their work. They were helpful in connecting me with other consultants and their cad designs were practical. I would highly recommend them.",
+    client: "Samara Adams",
+    location: "New Build Development in London"
   },
   {
     quote:
-      "Working with Kyle Mills was a masterclass in intentionality. Every corner serves a purpose.",
-    client: "Estate Developer",
-    location: "Coastal Compound, Malibu"
+      "RS was the architect for my home in North London. The project included a loft conversion, ground floor rear and side extension. They got the approvals I needed from the council, did the construction drawings and found me a good builder. There were difficulties with and hurdles that came up within the projects, but they handled it very well and provided good solutions. I am very happy with the outcome.",
+    client: "Mark Robson",
+    location: "North London"
   },
   {
     quote:

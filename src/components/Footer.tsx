@@ -117,7 +117,7 @@ const Footer = () => (
           </ul>
         </div>
       </div>
-      <div className="from-primary to-primary/10 bg-linear-to-t bg-clip-text text-center font-serif text-4xl text-transparent uppercase opacity-50 md:text-5xl lg:text-9xl">
+      <div className="from-primary to-primary/10 bg-linear-to-t bg-clip-text text-center font-serif text-4xl text-transparent uppercase opacity-70 md:text-5xl lg:text-9xl">
         Roshni Studio
       </div>
 
