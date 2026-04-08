@@ -18,7 +18,7 @@ export default function ProjectsGridView({
 
 function ProjectCard({ project }: { project: ProjectItem }) {
   return (
-    <div className="group relative overflow-hidden bg-gray-100">
+    <div className="group bg-charcoal/10 relative overflow-hidden">
       <Link href={project.link} className="block cursor-pointer">
         <div className="relative h-auto w-full">
           <img

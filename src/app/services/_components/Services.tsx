@@ -34,7 +34,9 @@ export default function Services() {
 
                 <div>
                   <Link href={`/services/${service.slug}`}>
-                    <Button variant={"outline"}>Explore Service</Button>
+                    <Button variant={"outline"} className="w-full">
+                      Explore Service
+                    </Button>
                   </Link>
                 </div>
               </div>

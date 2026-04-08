@@ -174,7 +174,7 @@ export function StripeBgGuides({
                       : "left-1/2"
                 } w-px ${
                   solidLines.includes(index + 1)
-                    ? "bg-gray-300"
+                    ? "bg-charcoal/10"
                     : "bg-gradient-to-b"
                 } overflow-hidden`}
                 style={

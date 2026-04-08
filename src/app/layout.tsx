@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   }
 };
 export const viewport: Viewport = {
-  themeColor: "#faf8f5"
+  themeColor: "#181b1f"
   // colorScheme: "dark"
 };
 
@@ -53,7 +53,7 @@ export default function RootLayout({
         </ReactLenis>
         <NextTopLoader
           showSpinner={false}
-          color="var(--primary)"
+          color="var(--color-charcoal)"
           zIndex={999}
           height={3}
         />
