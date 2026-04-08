@@ -1,5 +1,5 @@
 import Image from "next/image";
-import img from "../../../public/images/img.jpg";
+import img from "../../../public/images/img.webp";
 
 export default function Philosophy() {
   return (

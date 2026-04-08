@@ -2,10 +2,10 @@
 
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { StaticImageData } from "next/image";
-import img1 from "../../../public/images/pillar1.jpg";
-import img2 from "../../../public/images/pillar2.jpg";
-import img3 from "../../../public/images/pillar3.jpg";
-import img4 from "../../../public/images/pillar4.jpg";
+import img1 from "../../../public/images/pillar1.webp";
+import img2 from "../../../public/images/pillar2.webp";
+import img3 from "../../../public/images/pillar3.webp";
+import img4 from "../../../public/images/pillar4.webp";
 import PillarsMobile from "./PillarsMobile";
 import PillarsStack from "./PillarsStack";
 export interface Pillar {
