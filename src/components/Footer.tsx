@@ -121,14 +121,14 @@ const Footer = () => (
         Roshni Studio
       </div>
 
-      <div className="border-primary/5 flex flex-col items-center justify-between space-y-4 border-t pt-12 text-[10px] tracking-widest uppercase opacity-40 md:flex-row md:space-y-0">
+      <div className="flex flex-col items-center justify-between space-y-4 border-t pt-12 text-[0.625rem] tracking-[0.2em] uppercase opacity-60 md:flex-row md:space-y-0">
         <p>© 2026 Roshni Studio. All rights reserved.</p>
         <div className="flex space-x-8">
-          <a className="hover:opacity-100" href="#">
+          <a className="hover:underline hover:opacity-100" href="/privacy">
             Privacy Policy
           </a>
-          <a className="hover:opacity-100" href="#">
-            Terms of Service
+          <a className="hover:underline hover:opacity-100" href="/terms">
+            Terms & Conditions
           </a>
         </div>
       </div>

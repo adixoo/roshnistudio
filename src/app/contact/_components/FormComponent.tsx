@@ -62,7 +62,7 @@ function Contact() {
                 </div>
 
                 <div>
-                  <p className="text-charcoal/40 text-xs font-bold tracking-widest uppercase">
+                  <p className="text-charcoal/60 text-[0.625rem] font-bold tracking-[0.2em] uppercase">
                     {label}
                   </p>
                   <p className="text-sm font-medium">{value}</p>
@@ -94,7 +94,7 @@ function Contact() {
 
         {/* Social */}
         <div className="border-charcoal/20 mt-12 border-t pt-10">
-          <p className="text-charcoal/40 mb-4 text-xs font-bold tracking-widest uppercase">
+          <p className="text-charcoal/60 mb-4 text-[0.625rem] font-bold tracking-[0.2em] uppercase">
             Follow Us
           </p>
 
