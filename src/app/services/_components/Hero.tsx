@@ -2,7 +2,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32">
+    <section className="relative overflow-hidden pt-40 pb-30">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <Badge>Specialized Expertise</Badge>

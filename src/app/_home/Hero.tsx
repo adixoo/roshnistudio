@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="bg-sand-50">
-      <div className="flex items-center justify-center px-4 py-10 pt-40 text-center">
+      <div className="flex items-center justify-center px-4 pt-40 pb-10 text-center">
         <div className="relative z-10 max-w-4xl">
           <Badge>Residential & Wellness Studio</Badge>
 

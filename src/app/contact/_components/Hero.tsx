@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Hero() {
   return (
-    <section className="py-8 pt-40">
+    <section className="pt-40 pb-10">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-4 md:grid-cols-2">
         {/* Left Side: Content */}
         <div className="pt-12">
