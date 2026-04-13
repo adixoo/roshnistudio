@@ -30,7 +30,7 @@ export async function submitForm(data: FormValues) {
   };
 
   const { error } = await resend.emails.send({
-    from: "Enquiry Form roshnistudio.com <contact@resend.dev>",
+    from: `Roshnistudio.com - ${result.data.email} - <contact@resend.dev>`,
     to: ["rdaswani803@gmail.com"],
     subject: `New Enquiry from ${formattedData.name}`,
     html: `
