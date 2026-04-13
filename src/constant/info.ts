@@ -6,5 +6,5 @@ export enum StudioInfo {
   Instagram = "https://www.instagram.com/roshnidesignstudio",
   Pinterest = "https://uk.pinterest.com/daswani0660/",
   Facebook = "https://www.facebook.com/Roshnidesignstudio/",
-  Calendly = "https://calendly.com/muskianand89/30min?text_color=181b1f&primary_color=ebcb90"
+  Calendly = "https://calendly.com/ritika-roshnistudio/30min?text_color=181b1f&primary_color=ebcb90"
 }
