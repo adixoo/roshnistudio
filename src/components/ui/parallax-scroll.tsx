@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRef } from "react";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export interface ProjectItem {
   src: string;
@@ -84,7 +85,7 @@ const ProjectCard = ({
     >
       <Link href={project.link} className="block cursor-pointer">
         <div className="relative aspect-auto">
-          <img
+          <Image
             src={project.src}
             className="m-0! h-auto w-full gap-4 object-cover object-top-left p-0! transition-transform duration-500 group-hover:scale-105"
             height="400"
